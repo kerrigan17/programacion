@@ -11,12 +11,11 @@ public class ejercicio4 {
         int n3 = in.nextInt();
 
         if (n1 > n2 && n1 > n3){
-            System.out.println("El numero primer es mayor");
+            System.out.println(n1 + "es mayor");
         }else if (n2 > n1 && n2 > n3) {
-            System.out.println("El segundo numero es mayor");
-
+            System.out.println(n2 + "es mayor");
         }else {
-            System.out.println("El tercer numero es mayor");
+            System.out.println(n3 + "es mayor");
 
         }
 
