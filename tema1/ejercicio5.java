@@ -11,10 +11,8 @@ public class ejercicio5 {
         int n3 = in.nextInt();
 
         int mediasin = (n1 + n2 + n3)/3;
-        double mediacon = (n1 + n2 + n3)/3;
 
         System.out.println("La media sin decimales es: " + mediasin);
-        System.out.println("La media sin decimales es: " + mediacon);
 
     
     }
