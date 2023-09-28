@@ -6,12 +6,12 @@ public class ejercicio14 {
         System.out.println("¿Cuántas personas?");
         int personas = in.nextInt();
         System.out.println("¿Cuántos días?");
-
         int dias = in.nextInt();
+
         int tar = personas * dias * 15;
 
 
-        if (personas >= 5){
+        if (personas >= 5 && dias >= 7){
            double tarnew = tar * 0.75;
            System.out.println(tarnew);
         }else {
