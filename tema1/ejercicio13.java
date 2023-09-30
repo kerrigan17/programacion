@@ -28,5 +28,5 @@ public class ejercicio13 {
 
         System.out.println("Hora con un segundo más: " + hor + ":" + min + ":"+ seg );
 
-    }
+        }
 }
