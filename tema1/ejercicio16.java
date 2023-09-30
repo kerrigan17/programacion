@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ejercicio16 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Si quieres de euros a dolares escribe D y si quieres dolares a euros escribe E");
+        System.out.println("Si quieres de euros a dolares escribe D; y si quieres dolares a euros escribe E");
         int de = in.nextInt();
         System.out.println("¿Cuánto dinero?");
         int dinero = in.nextInt();
@@ -17,7 +17,7 @@ public class ejercicio16 {
             System.out.println(de + " dolares, son " + euros);
 
         }else{
-            System.out.println("Tienes que poner 'D' o 'E'.")
+            System.out.println("Tienes que poner 'D' o 'E'.");
             
         }
     }
