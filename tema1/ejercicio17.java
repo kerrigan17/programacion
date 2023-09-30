@@ -8,7 +8,7 @@ public class ejercicio17 {
 
         if (numero == 0){
             System.out.println("Perimetro del cuadrado = 4*lado. Superficie del cuadrado = base*altura");
-        }if else(numero == 1){
+        }if(numero == 1){
             System.out.println("Perimetro del rectangulo = 2*base + 2*altura. Superficie del rectangulo = base*altura");
 
         }else{
