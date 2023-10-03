@@ -12,7 +12,7 @@ public class ejercicio17 {
             System.out.println("Perimetro del rectangulo = 2*base + 2*altura. Superficie del rectangulo = base*altura");
 
         }else{
-            System.out.println("ERROR")
+            System.out.println("ERROR");
             
         }
     }
