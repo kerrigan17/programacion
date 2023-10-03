@@ -5,15 +5,19 @@ public class ejercicio22 {
         Scanner in = new Scanner(System.in);
         System.out.println("Dame un numero:");
         int numero = in.nextInt();
+        int cifras = 0;
 
-        if (numero%10 <= 9){
-            numero
-            if (numero%10 <= 9){
-            }else {
-                System.out.println("Tu numero tiene dos cifras.");
+        if (numero == 0) {
+            cifras = 1;
+        } else {
+            // Mientras el número sea diferente de 0, dividimos entre 10
+            // y aumentamos el contador de cifras
+            while (numero != 0) {
+                cifras++;
+                numero = numero / 10;
             }
-        }else {
-            System.out.println("Tu numero tiene una cifra.");
+
         }
+        System.out.println(cifras);
     }
 }
