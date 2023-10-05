@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d8a2c4c-05a0-4fe5-b8f3-43dd60dfa19a" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/tema2/ejercicio19.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tema2/ejercicio20.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tema2/ejercicio21.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tema2/ejercicio22.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tema2/ejercicio23.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tema2/ejercicio25.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tema2/ejercicio26.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tema2/ejercico24.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tema1/ejercicio19.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tema1/ejercicio20.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tema1/ejercicio21.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tema1/ejercicio22.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tema1/ejercicio23.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tema1/ejercicio25.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tema1/ejercicio26.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tema1/ejercico24.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/tema1/ejercicio28.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,11 +47,18 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_directory_selection&quot;: &quot;/home/celram/IdeaProjects/programacion&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/celram/IdeaProjects/programacion/tema2&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tema2" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -164,7 +156,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696421114316</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary=".">
+      <option name="closed" value="true" />
+      <created>1696495780224</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696495780224</updated>
+    </task>
+    <task id="LOCAL-00013" summary=".">
+      <option name="closed" value="true" />
+      <created>1696498823674</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696498823674</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
