@@ -10,7 +10,7 @@ public class ejercico24 {
         int alumno = 0;
 
         while(true){
-            System.out.println("Dame las notas");
+            System.out.println("Dame las notas, para salir, escribe un numero negativo:");
             int nota = in.nextInt();
             if(nota <= -1){
                 break;
