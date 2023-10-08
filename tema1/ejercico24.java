@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.swing.text.Style;
-
 public class ejercico24 {
     public static void main (String[]args){
         Scanner in = new Scanner(System.in);

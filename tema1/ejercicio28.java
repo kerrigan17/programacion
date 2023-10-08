@@ -1,22 +1,23 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class ejercicio28 {
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
-        System.out.println("Dame un numero:");
-        int num1 = in.nextInt();
-        System.out.println("Dame otro numero, no has acertado:");
-        int num2 = in.nextInt();
-        System.out.println("Dame otro numero, no has acertado:");
-        int num3 = in.nextInt();
-        System.out.println("Dame otro numero, no has acertado:");
-        int num4 = in.nextInt();
-        System.out.println("Dame otro numero, no has acertado:");
-        int num5 = in.nextInt();
 
-        int random = (int)Math.floor(Math.random()*1000000+1);
-        System.out.println(random);
+        Random random = new Random();
+        int loteria = random.nextInt(100000);
 
+        for(int i = 0; i <= 5; i++){
+            System.out.println("Dame un numero entre el 0 y el 99.999 p0ara poder ganar la loteria. Tienes 5 intentos:");
+            int num1 = in.nextInt();
+            if(num1 == loteria){
+                System.out.println("wooohooo, has acertado campeon");
+            }else{
+                System.out.println("Lo siento, el numero era" + loteria);
+            }
+
+        }
         }
 }
 
