@@ -8,12 +8,11 @@ public class ejercicio30 {
         while(continuar){
             System.out.println("Dame un numero para la operacion");
             double numero1 = in.nextDouble();
-            System.out.println("Dame otro numero para la operacion");
             String op = in.toString();
             if (op.equals("q")) {
                 continuar = false;
             } else {
-                System.out.print("Ingrese el segundo número: ");
+                System.out.print("Ingrese un número: ");
                 double numero2 = in.nextDouble();
                 double resultado = 0.0;
                 switch (op) {
@@ -40,9 +39,7 @@ public class ejercicio30 {
                             System.out.println("ERROR");
                         }
                         break;
-                    default:
-                        System.out.println("OEROOR");
-                        break;
+
                 }
             }
 

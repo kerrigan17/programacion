@@ -6,7 +6,7 @@ public class ejercicio29 {
         Scanner in = new Scanner(System.in);
 
         Random random = new Random();
-        int secreto = random.nextInt(1000);
+        int secreto = random.nextInt(100);
 
         for (int i = 0; i <=100; i++) {
             System.out.println("Dame un numero del 1 al 100 para averiguar el numero secreto:");

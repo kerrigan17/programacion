@@ -14,7 +14,7 @@ public class ejercicio28 {
             if(num1 == loteria){
                 System.out.println("wooohooo, has acertado campeon");
             }else{
-                System.out.println("Lo siento, el numero era" + loteria);
+                System.out.println("Lo siento, no has acertado");
             }
 
         }

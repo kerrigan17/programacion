@@ -7,7 +7,7 @@ public class ejercicio23 {
         int contador = 0;
 
         while (true) {
-            System.out.print("Introduce un número entero: ");
+            System.out.print("Introduce un número entero, si quieres salir pon uno negativo: ");
             int numero = in.nextInt();
 
             if (numero < 0) {
