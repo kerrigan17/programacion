@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class practica_combate {
@@ -16,9 +17,13 @@ public class practica_combate {
         int vida2 = 0;
         int total2 = 501;
 
+        Random rand = new Random();
+        int danio2 = (int) (ataque1 * 0.8 - defensa2 * 0.4)*rand.nextInt(1000);
+        int danio1 = (int) (ataque2 * 0.8 - defensa1 * 0.4)*rand.nextInt(1000);
+
 
         while(total1 > 500){
-            System.out.println("Va a comenzar el combate, recuerda que tus cinco atributos tienen que sumar maximo 500: ");
+            System.out.println("Va a comenzar el combate, que tus cinco atributos tienen que sumar maximo 500: ");
             System.out.println("Elige la velocidad del JUGADOR 1: ");
             velocidad1 = in.nextInt();
             System.out.println("Elige el ataque del JUGADOR 1: ");
@@ -52,15 +57,24 @@ public class practica_combate {
             }
         }
 
-        if(velocidad1>velocidad2){
-            if (vida1<=0 &&vida2<=0){
-                System.out.println("Lo siento, has muerto");
-            }
-            System.out.println("JUGADOR 1 empieza el turno");
+        if (vida1<=0 || vida2<=0){
+            if (vida1<=0){
+                System.out.println("Lo siento JUGADOR 1, has muerto");
+                System.out.println("Enhorabuena JUGADOR 1, has ganado");
 
+            }
+            if (vida2<=0){
+                System.out.println("Lo siento JUGADOR 2, has muerto" );
+                System.out.println("Enhorabuena JUGADOR 1, has ganado");
+            }
+        }
+
+        if(velocidad1>velocidad2){
+            System.out.println("JUGADOR 1 empieza el turno");
         }else {
             System.out.println("JUGADOR 2 empieza el turno");
         }
+
 
     }
 }
