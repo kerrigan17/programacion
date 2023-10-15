@@ -25,12 +25,13 @@ public class combate {
             boolean personver1 =false;
             boolean personver2 =false;
             
-            while(personver1==false){
+            while(!personver1){
                 System.out.println("En breves empezara el combate");
                 System.out.println("Primero, escoge el PERSONAJE 1 poniendo el numero: ");
                 System.out.println("1. Tigre de Hierro");
                 System.out.println("2. Sombra Agil");
                 System.out.println("3. Guerrero de Piedra");
+<<<<<<< HEAD
                 System.out.println("4. Mago maravilla");
                 String numeroper = in.nextLine();            
                 switch(numeroper) {
@@ -39,22 +40,42 @@ public class combate {
                     vida1 = 100;
                     ataque1=80;
                     defensa1=80;
+=======
+                System.out.println("4. Mago Vital");
+                String personaje1 = in.nextLine();            
+                switch(personaje1) {
+                case "1":
+                    vida1 = 100;
+                    critico1=60;
+                    ataque1=100;
+                    defensa1=180;
+>>>>>>> c3c31387a2eccc5f43bb346feee636da607a8515
                     velocidad1=10;
-                    regener1=150;
+                    regener1=50;
                     personver1=true;
                     break;
                 case "2":
+<<<<<<< HEAD
                     vida1 = 100;
                     personaje1="Sombra Agil";
+=======
+                    vida1=100;
+                    critico1=40;
+>>>>>>> c3c31387a2eccc5f43bb346feee636da607a8515
                     ataque1=80;
                     defensa1=80;
-                    velocidad1=150;
-                    regener1=150;
+                    velocidad1=100;
+                    regener1=50;
                     personver1=true;
                     break;
                 case "3":
+<<<<<<< HEAD
                     vida1 = 100;
                     personaje1="Guerrero de Piedra";
+=======
+                    vida1=100;
+                    critico1=160;
+>>>>>>> c3c31387a2eccc5f43bb346feee636da607a8515
                     ataque1=150;
                     defensa1=80;
                     velocidad1=50;
@@ -62,8 +83,13 @@ public class combate {
                     personver1=true;
                     break;
                 case "4":
+<<<<<<< HEAD
                     vida1 = 100;
                     personaje1="Mago maravilla";
+=======
+                    vida1=100;
+                    critico1=160;
+>>>>>>> c3c31387a2eccc5f43bb346feee636da607a8515
                     ataque1=80;
                     defensa1=180;
                     velocidad1=10;
@@ -83,7 +109,11 @@ public class combate {
             System.out.println("Regeneracion: " + regener1);
             System.out.println(" ");
             
+<<<<<<< HEAD
             while(personver2==false) {
+=======
+            if (!personver2) {
+>>>>>>> c3c31387a2eccc5f43bb346feee636da607a8515
                 System.out.println("Ahora, escoge el PERSONAJE 2 poniendo el numero: ");
                 System.out.println("1. Tigre de Hierro");
                 System.out.println("2. Sombra Agil");
@@ -93,6 +123,7 @@ public class combate {
 
                 switch(numeroper2) {
                     case "1":
+<<<<<<< HEAD
                     personaje2="Tigre de Hierro";
                     ataque2=80;
                     defensa2=80;
@@ -227,6 +258,84 @@ public class combate {
                     }else{
                         System.out.println("Te has equivocado :' ). Lo siento, pero por empanadilla pierdes la silla...");
                     }
+=======
+                        vida2=100;
+                        critico2=160;
+                        ataque2=80;
+                        defensa2=80;
+                        velocidad2=10;
+                        regener2 = 150;
+                        personver2=true;
+                        break;
+                    case "2":
+                        vida2=100;
+                        critico2=160;
+                        ataque1=80;
+                        defensa1=80;
+                        velocidad1=10;
+                        regener1=150;
+                        personver2=true;
+                        break;
+                    case "3":
+                        vida2=100;
+                        critico2=160;
+                        ataque1=80;
+                        defensa1=60;
+                        velocidad1=10;
+                        regener1=150;
+                        personver2=true;
+                        break;
+                    case "4":
+                        vida2=100;
+                        critico2=160;
+                        ataque1=80;
+                        defensa1=80;
+                        velocidad1=10;
+                        regener1=50;
+                        personver2=true;
+                        break;
+                    default:
+                        System.out.println("ERROR");
+                        break;
+                }
+            }
+
+            Random random = new Random();
+            int aleatorio = random.nextInt(8);
+            int batalla = 0;
+            int regeneracion = 0;
+
+            if (velocidad1 > velocidad2) {
+                System.out.println("JUGADOR 1, empiezas la partida");                
+                System.out.println("Si quieres atacar, escribe 'a', si quieres regenerarte, escribe 'r', si quieres lanza un critico, escribe 'c'");
+                char ar1 = in.next().charAt(0);
+                if (ar1 == 'a'){
+                    batalla = ataque1*aleatorio - defensa2*aleatorio;
+                    System.out.println("JUGADOR 1 ataca y reduce la vida de JUGADOR 2 en" + batalla + "Y deja la vida de ");
+                }if (ar1 == 'r'){
+                    regeneracion = vida1 + (2*regener1/3);
+                }if(ar1 == 'c'){
+                    int ctitico1 = critico1;
+                }else{
+                    System.out.println("Dame 'a' para atacar, 'r' para regenerarte o 'c' si quieres lanzar un critico");
+                }
+
+            }else{
+                System.out.println("JUGADOR 2, empiezas la partida");
+                System.out.println("Si quieres atacar, escribe 'a', si quieres regenerarte, escribe 'r', si quieres lanzar un critico escribe 'c'");
+                char ar2 = in.next().charAt(0);
+                if (ar2 == 'a'){
+                    int batalla = ataque2*aleatorio - defensa1*aleatorio ;
+                    
+                }if (ar2 == 'r'){
+                    int regeneracioN = vida2 + (2*regener2/3);
+
+                }if(ar2 == 'c'){
+                    int ctitico = critico1;
+                }else{
+                    System.out.println("Si quieres atacar, escribe 'a', si quieres regenerarte, escribe 'r', si quieres lanzar un critico escribe 'c'");
+
+>>>>>>> c3c31387a2eccc5f43bb346feee636da607a8515
                 }
             }
     }
