@@ -173,7 +173,7 @@ public class combate {
                         System.out.println("Vida de " + personaje1 + ": " + vida1);
                         System.out.println("Vida de " + personaje2 + ": " + vida2);
                     }
-                    if (arc == 'b') {
+                    if (arc == 'r') {
                         vida1 = vida1 + regeneracion1;
                         System.out.println(personaje1 + " se ha regenerado.");
                         System.out.println("Vida de " + personaje1 + ": " + vida1);
