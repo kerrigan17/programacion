@@ -4,218 +4,69 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d8a2c4c-05a0-4fe5-b8f3-43dd60dfa19a" name="Changes" comment=".">
-      <change beforePath="$PROJECT_DIR$/out/production/programacion/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/programacion/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/programacion/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/programacion/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="d2508aa8-84a5-47c8-b186-0b41a8963aa6" name="Changes" comment=".">
       <change beforePath="$PROJECT_DIR$/out/production/programacion/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/programacion/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/programacion/ejercicio23.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/programacion/ejercicio23.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/programacion/ejercicio28.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/programacion/ejercicio28.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/programacion/ejercico24.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/programacion/ejercico24.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tema1/ejercicio17.java" beforeDir="false" afterPath="$PROJECT_DIR$/tema1/ejercicio17.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tema1/ejercicio28.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/programacion/practica_combate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tema1/combate.java" beforeDir="false" afterPath="$PROJECT_DIR$/tema1/combate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/tema1/ejercicio4.java" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
+  &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2VvQNXhFs9n4xJTTbdHGukJxT5k" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2WhOUp48TOXgZXTwqEkkbkeTTXM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "18",
-    "last_directory_selection": "/home/celram/IdeaProjects/programacion",
-    "last_opened_file_path": "/home/celram/IdeaProjects/programacion",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tema2" />
-    </key>
-  </component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3d8a2c4c-05a0-4fe5-b8f3-43dd60dfa19a" name="Changes" comment="" />
-      <created>1695714036023</created>
+      <changelist id="d2508aa8-84a5-47c8-b186-0b41a8963aa6" name="Changes" comment="" />
+      <created>1697181364086</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695714036023</updated>
+      <updated>1697181364086</updated>
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
-      <created>1695718480537</created>
+      <created>1697187170964</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1695718480537</updated>
+      <updated>1697187170964</updated>
     </task>
-    <task id="LOCAL-00002" summary=".">
-      <option name="closed" value="true" />
-      <created>1695721231715</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1695721231715</updated>
-    </task>
-    <task id="LOCAL-00003" summary=".">
-      <option name="closed" value="true" />
-      <created>1695721243097</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1695721243097</updated>
-    </task>
-    <task id="LOCAL-00004" summary=".">
-      <option name="closed" value="true" />
-      <created>1696323066772</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1696323066772</updated>
-    </task>
-    <task id="LOCAL-00005" summary=".">
-      <option name="closed" value="true" />
-      <created>1696323087690</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1696323087690</updated>
-    </task>
-    <task id="LOCAL-00006" summary=".">
-      <option name="closed" value="true" />
-      <created>1696325830771</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1696325830771</updated>
-    </task>
-    <task id="LOCAL-00007" summary=".">
-      <option name="closed" value="true" />
-      <created>1696325849482</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1696325849482</updated>
-    </task>
-    <task id="LOCAL-00008" summary=".">
-      <option name="closed" value="true" />
-      <created>1696419320836</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1696419320836</updated>
-    </task>
-    <task id="LOCAL-00009" summary=".">
-      <option name="closed" value="true" />
-      <created>1696420650851</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1696420650852</updated>
-    </task>
-    <task id="LOCAL-00010" summary=".">
-      <option name="closed" value="true" />
-      <created>1696420661226</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1696420661226</updated>
-    </task>
-    <task id="LOCAL-00011" summary=".">
-      <option name="closed" value="true" />
-      <created>1696421114316</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1696421114316</updated>
-    </task>
-    <task id="LOCAL-00012" summary=".">
-      <option name="closed" value="true" />
-      <created>1696495780224</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1696495780224</updated>
-    </task>
-    <task id="LOCAL-00013" summary=".">
-      <option name="closed" value="true" />
-      <created>1696498823674</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1696498823674</updated>
-    </task>
-    <task id="LOCAL-00014" summary=".">
-      <option name="closed" value="true" />
-      <created>1696501503810</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1696501503810</updated>
-    </task>
-    <task id="LOCAL-00015" summary=".">
-      <option name="closed" value="true" />
-      <created>1696501525407</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1696501525407</updated>
-    </task>
-    <task id="LOCAL-00016" summary=".">
-      <option name="closed" value="true" />
-      <created>1696927711733</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1696927711733</updated>
-    </task>
-    <task id="LOCAL-00017" summary=".">
-      <option name="closed" value="true" />
-      <created>1696927780998</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1696927780998</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="." />
     <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>

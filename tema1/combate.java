@@ -36,39 +36,39 @@ public class combate {
                 System.out.println("****************************************************************************************************************************************************************");         
                 switch(numeroper) {
                 case "1":
+                    vida1 = 150;
                     personaje1="Tigre de Hierro";
-                    vida1 = 100;
-                    ataque1=80;
-                    defensa1=80;
-                    velocidad1=10;
+                    ataque1=150;
+                    defensa1=100;
+                    velocidad1=50;
                     regener1=50;
                     personver1=true;
                     break;
                 case "2":
                     vida1 = 100;
                     personaje1="Sombra Agil";
-                    ataque1=80;
+                    ataque1=150;
                     defensa1=80;
                     velocidad1=100;
-                    regener1=50;
+                    regener1=70;
                     personver1=true;
                     break;
                 case "3":
-                    vida1 = 100;
+                    vida1 = 200;
                     personaje1="Guerrero de Piedra";
-                    ataque1=150;
-                    defensa1=80;
-                    velocidad1=50;
-                    regener1=60;
+                    ataque1=50;
+                    defensa1=150;
+                    velocidad1=20;
+                    regener1=80;
                     personver1=true;
                     break;
                 case "4":
-                    vida1 = 100;
+                    vida1 = 120;
                     personaje1="Mago maravilla";
-                    ataque1=80;
-                    defensa1=180;
-                    velocidad1=10;
-                    regener1=150;
+                    ataque1=120;
+                    defensa1=120;
+                    velocidad1=20;
+                    regener1=120;
                     personver1=true;
                     break;
                 default:
@@ -96,44 +96,44 @@ public class combate {
 
                 switch(numeroper2) {
                     case "1":
-                    personaje2="Tigre de Hierro";
-                    vida2 = 100;
-                    ataque2=80;
-                    defensa2=80;
-                    velocidad2=10;
-                    regener2 = 150;
-                    personver2=true;
-                break;
-                case "2":
-                    personaje2="Sombra Agil";
-                    vida2 = 100;
-                    ataque2=80;
-                    defensa2=80;
-                    velocidad2=10;
-                    regener2=150;
-                    personver2=true;
-                    break;
-                case "3":
-                    personaje2="Guerrero de piedra";
-                    vida2 = 100;;
-                    ataque2=80;
-                    defensa2=130;
-                    velocidad2=10;
-                    regener2=150;
-                    personver2=true;
-                    break;
-                case "4":
-                    personaje2="Mago maravilla";
-                    vida2 = 100;
-                    ataque2=80;
-                    defensa2=80;
-                    velocidad2=30;
-                    regener2=150;
-                    personver2=true;
-                    break;
-                default:
-                    System.out.println("ERROR");
-                    break;
+                        personaje2="Tigre de Hierro";
+                        vida2 = 100;
+                        ataque2=80;
+                        defensa2=60;
+                        velocidad2=10;
+                        regener2 = 150;
+                        personver2=true;
+                        break;
+                    case "2":
+                        vida2 = 100;
+                        personaje2="Sombra Agil";
+                        ataque2=150;
+                        defensa2=80;
+                        velocidad2=100;
+                        regener2=70;
+                        personver2=true;
+                        break;
+                    case "3":
+                        personaje2="Guerrero de piedra";
+                        vida2 = 200;
+                        ataque2=50;
+                        defensa2=150;
+                        velocidad2=20;
+                        regener2=80;
+                        personver2=true;
+                        break;
+                    case "4":
+                        personaje2="Mago maravilla";
+                        vida2 = 120;
+                        ataque2=120;
+                        defensa2=120;
+                        velocidad2=20;
+                        regener2=120;
+                        personver2=true;
+                        break;
+                    default:
+                        System.out.println("ERROR");
+                        break;
                 } 
             }
             System.out.println("jugador 2 Has elegido a: " + personaje2);
@@ -170,109 +170,124 @@ public class combate {
                     if (arc == 'a'){
                         vida2 =vida2 - batalla1;
                         System.out.println(personaje1 + " ha atacado a "+personaje2+".");
+                        System.out.println("Vida de " + personaje1 +": " + vida1);
+                        System.out.println("Vida de " + personaje2 +": " + vida2);
                     }if (arc == 'b'){
                         vida1 = vida1 + regeneracion1;
-                        System.out.println(personaje1 + " se ha regenerado y ahora tiene " + vida1 + " puntos de vida.");                       
+                        System.out.println(personaje1 + " se ha regenerado.");
+                        System.out.println("Vida de " + personaje1 +": " + vida1);
+                        System.out.println("Vida de " + personaje2 +": " + vida2);
                     }if (arc == 'c'){
                         vida2 = vida2 - critico1;
-                        System.out.println(personaje1 + " le ha lanzado un ataque critico y le ha dejado con " + vida2 + " puntos de vida a " + personaje2);                    
+                        System.out.println(personaje1 + " le ha lanzado un ataque critico.");
+                        System.out.println("Vida de " + personaje1 +": " + vida1);
+                        System.out.println("Vida de " + personaje2 +": " + vida2);
                     }else{
                         System.out.println(" ");
                     }
-
+                }
+                while (vida1 > 0 && vida2 > 0) {
                     System.out.println("****************************************************************************************************************************************************************");
                     System.out.println("JUGADOR 2, tu turno.");
                     System.out.println("JUGADOR 2, si quieres atacar, escribe 'a', si quieres regenerarte, escribe 'r', si quieres lanzar un critico escribe 'c'.");
                     char arc2 = in.next().charAt(0);
-                    if (arc2 == 'a'){                        
+                    if (arc2 == 'a') {
                         vida1 = vida1 - batalla2;
-                        System.out.println(personaje2 + " ha atacado a "+personaje1+".");
-                        System.out.println("****************************************************************************************************************************************************************");                        
-                        System.out.println("VIDA: " + personaje1 + vida1);                        
-                        System.out.print(" ");
-                        System.out.println("VIDA: " + personaje2 + vida2);                                             
-                        System.out.print(batalla1);
-                    }if (arc2 == 'r'){
+                        System.out.println("****************************************************************************************************************************************************************");
+                        System.out.println(personaje2 + " ha atacado a " + personaje1 + ".");
+                        System.out.println("Vida de " + personaje1 + ": " + vida1);
+                        System.out.println("Vida de " + personaje2 + ": " + vida2);
+                    }
+                    if (arc2 == 'r') {
                         vida2 = vida2 + regeneracion2;
-                        System.out.println(personaje2 + " se ha regenerado y ahora tiene " + vida2 + " puntos de vida.");                    
-                        System.out.println("VIDA: " + personaje1);
-                        for (int i = 1; i <= 100; i++) {
-                            System.out.print(".");
-                        }
-                        System.out.print(" ");
-                        System.out.println("VIDA: " + personaje2);
-                        for (int i = 1; i <= 100; i++) {
-                            System.out.print(".");
-                        }
-                        }
-                    if (arc2 == 'c'){
+                        System.out.println("****************************************************************************************************************************************************************");
+                        System.out.println(personaje2 + " se ha regenerado.");
+                        System.out.println("Vida de " + personaje1 + ": " + vida1);
+                        System.out.println("Vida de " + personaje2 + ": " + vida2);
+                    }
+                    if (arc2 == 'c') {
                         vida1 = vida1 - critico2;
+                        System.out.println("****************************************************************************************************************************************************************");
                         System.out.println(personaje2 + " le ha lanzado un ataque critico a " + personaje1);
-                        System.out.println("Vida" + personaje1 + vida1);
-                        
-                        System.out.println("Vida" + personaje2 + vida2);                        
-                    }else{
+                        System.out.println("Vida de " + personaje1 + ": " + vida1);
+                        System.out.println("Vida de " + personaje2 + ": " + vida2);
+                    } else {
                         System.out.println(" ");
                     }
 
+                    if (vida1 <= 0) {
+                        System.out.println("****************************************************************************************************************************************************************");
+                        System.out.println("JUGADOR 1 HAS MUERTO");
+                        System.out.println("****************************************************************************************************************************************************************");
+
+                    }
+                    if (vida2 <= 0) {
+                        System.out.println("****************************************************************************************************************************************************************");
+                        System.out.println("JUGADOR 2 HAS MUERTO");
+                        System.out.println("****************************************************************************************************************************************************************");
+
+                    }
                     ronda1 = ++ronda1;
                 }
-            }else{
+            }if(velocidad2>velocidad1) {
                 System.out.println("JUGADOR 2, empiezas la partida");
-                while(vida1>0&&vida2>0){
+                while (vida1 > 0 && vida2 > 0) {
                     System.out.println("****************************************************************************************************************************************************************");
                     System.out.println("RONDA:  " + ronda2);
                     System.out.println("JUGADOR 2, si quieres atacar, escribe 'a', si quieres regenerarte, escribe 'r', si quieres lanzar un critico escribe 'c'.");
                     char arc2 = in.next().charAt(0);
-                    if (arc2 == 'a'){                        
+                    if (arc2 == 'a') {
                         vida1 = vida1 - batalla2;
-                        System.out.println(personaje2 + " ha atacado a "+personaje1+".");
-                        System.out.println("****************************************************************************************************************************************************************");                        
-                        System.out.println("VIDA: " + personaje1 + vida1);                        
-                        System.out.print(" ");
-                        System.out.println("VIDA: " + personaje2 + vida2);                     
-                    }if (arc2 == 'r'){
-                        vida2 = vida2 + regeneracion2;
-                        System.out.println(personaje2 + " se ha regenerado y ahora tiene " + vida2 + " puntos de vida.");                    
-                        System.out.println("VIDA: " + personaje1);
-                        for (int i = 1; i <= 100; i++) {
-                            System.out.print(".");
-                        }
-                        System.out.print(" ");
-                        System.out.println("VIDA: " + personaje2);
-                        for (int i = 1; i <= 100; i++) {
-                            System.out.print(".");
-                        }
-                        }
-                    if (arc2 == 'c'){
-                        vida1 = vida1 - critico2;
-                        System.out.println(personaje2 + " le ha lanzado un ataque critico a " + personaje1);
-                        System.out.println("Vida" + personaje1 + vida1);
-                        
-                        System.out.println("Vida" + personaje2 + vida2);                        
-                    }else{
-                        System.out.println(" ");
+                        System.out.println(personaje2 + " ha atacado a " + personaje1 + ".");
+                        System.out.println("****************************************************************************************************************************************************************");
+                        System.out.println("Vida de JUGADOR 1 " + personaje1 + ": " + vida1);
+                        System.out.println("Vida de JUGADOR 2 " + personaje2 + ": " + vida2);
                     }
+                    if (arc2 == 'r') {
+                        vida2 = vida2 + regeneracion2;
+                        System.out.println(personaje2 + " se ha regenerado.");
+                        System.out.println("Vida de JUGADOR 1 " + personaje1 + ": " + vida1);
+                        System.out.println("Vida de JUGADOR  " + personaje2 + ": " + vida2);
+                        if (arc2 == 'c') {
+                            vida1 = vida1 - critico2;
+                            System.out.println(personaje2 + " le ha lanzado un ataque critico a " + personaje1);
+                            System.out.println("Vida de JUGADOR 1 " + personaje1 + ": " + vida1);
+                            System.out.println("Vida de JUGADOR 2 " + personaje2 + ": " + vida2);
+                        } else {
+                            System.out.println(" ");
+                        }
+                    }
+                }
+                while (vida1 > 0 && vida2 > 0) {
                     System.out.println("****************************************************************************************************************************************************************");
-                    System.out.println("RONDA:  " + ronda1);
                     System.out.println("JUGADOR 1, Si quieres atacar, escribe 'a', si quieres regenerarte, escribe 'r', si quieres lanza un critico, escribe 'c'");
                     char arc = in.next().charAt(0);
-                    if (arc == 'a'){
-                        vida2 =vida2 - batalla1;
-                        System.out.println(personaje1 + " ha atacado a "+personaje2+".");
-                    }if (arc == 'b'){
+                    if (arc == 'a') {
+                        vida2 = vida2 - batalla1;
+                        System.out.println(personaje1 + " ha atacado a " + personaje2 + ".");
+                        System.out.println("Vida de JUGADOR 1 " + personaje1 + ": " + vida1);
+                        System.out.println("Vida de JUGADOR 2 " + personaje2 + ": " + vida2);
+                    }
+                    if (arc == 'b') {
                         vida1 = vida1 + regeneracion1;
-                        System.out.println(personaje1 + " se ha regenerado y ahora tiene " + vida1 + " puntos de vida.");                       
-                    }if (arc == 'c'){
+                        System.out.println(personaje1 + " se ha regenerado.");
+                        System.out.println("Vida de JUGADOR 1" + personaje1 + ": " + vida1);
+                        System.out.println("Vida de JUGADOR 2" + personaje2 + ": " + vida2);
+                    }
+                    if (arc == 'c') {
                         vida2 = vida2 - critico1;
-                        System.out.println(personaje1 + " le ha lanzado un ataque critico y le ha dejado con " + vida2 + " puntos de vida a " + personaje2);                    
-                    }else{
+                        System.out.println(personaje1 + " le ha lanzado un ataque critico.");
+                        System.out.println("Vida de JUGADOR 1 " + personaje1 + ": " + vida1);
+                        System.out.println("Vida de JUGADOR 2 " + personaje2 + ": " + vida2);
+                    } else {
                         System.out.println(" ");
                     }
-                    
+
                     ronda2 = ++ronda2;
                 }
             }
+
+
     }
 }
 
