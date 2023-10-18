@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2508aa8-84a5-47c8-b186-0b41a8963aa6" name="Changes" comment=".">
-      <change beforePath="$PROJECT_DIR$/out/production/programacion/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/programacion/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/programacion/practica_combate.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tema1/combate.java" beforeDir="false" afterPath="$PROJECT_DIR$/tema1/combate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +50,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697187170964</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=".">
+      <option name="closed" value="true" />
+      <created>1697532016199</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697532016199</updated>
+    </task>
+    <task id="LOCAL-00003" summary=".">
+      <option name="closed" value="true" />
+      <created>1697532500841</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697532500841</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
