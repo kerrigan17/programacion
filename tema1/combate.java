@@ -404,6 +404,7 @@ public class combate {
                             System.out.println("Vida de JUGADOR1 " + personaje1 + ": " + vida1);
 
                             System.out.println("Vida de JUGADOR2 " + personaje2 + ": " + vida2);
+                            
                         }
                         if (arc == 'r') {
                             vida1 = vida1 + regeneracion1;
@@ -422,6 +423,7 @@ public class combate {
                         vida1 = 0;
                         vida2 = 0;
                         }
+                        
 
                         System.out.println("****************************************************************************************************************************************************************");
                         System.out.println("TURNO JUGADOR 2");
