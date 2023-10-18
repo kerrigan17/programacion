@@ -4,9 +4,9 @@ import java.util.Scanner;
 public class combate {
     public static void main(String[] args){
             Scanner in = new Scanner(System.in);
-            Random random = new Random();                 
+            Random random = new Random();
 
-            
+
             int velocidad1 = 0;
             int ataque1 = 0;
             int defensa1 = 0;
@@ -25,7 +25,7 @@ public class combate {
 
             boolean personver1 =false;
             boolean personver2 =false;
-            
+
             while(!personver1){
                 System.out.println("En breves empezara el combate");
                 System.out.println("Primero, escoge el PERSONAJE 1 poniendo el numero: ");
@@ -34,8 +34,8 @@ public class combate {
                 System.out.println("2. Sombra Agil");
                 System.out.println("3. Guerrero de Piedra");
                 System.out.println("4. Mago maravilla");
-                String numeroper = in.nextLine();   
-                System.out.println("****************************************************************************************************************************************************************");         
+                String numeroper = in.nextLine();
+                System.out.println("****************************************************************************************************************************************************************");
                 switch(numeroper) {
                 case "1":
                     vida1 = 100;
@@ -199,7 +199,7 @@ public class combate {
             System.out.println("Regeneracion: " + regener1);
             System.out.println(imag1);
             System.out.println("****************************************************************************************************************************************************************");
-            
+
             while(!personver2) {
                 System.out.println("Ahora, escoge el PERSONAJE 2 poniendo el numero: ");
                 System.out.println("1. Tigre de Hierro");
@@ -207,7 +207,7 @@ public class combate {
                 System.out.println("3. Guerrero de Piedra");
                 System.out.println("4. Mago maravilla");
                 String numeroper2 = in.nextLine();
-                System.out.println("****************************************************************************************************************************************************************");               
+                System.out.println("****************************************************************************************************************************************************************");
 
                 switch(numeroper2) {
                     case "1":
@@ -361,14 +361,14 @@ public class combate {
                     default:
                         System.out.println("ERROR");
                         break;
-                } 
+                }
             }
             System.out.println("JUGADOR 2, has elegido a: " + personaje2);
             System.out.println("Vida: 100");
             System.out.println("Ataque: " + ataque2);
             System.out.println("Defensa: " + defensa2);
             System.out.println("Velocidad: " + velocidad2);
-            System.out.println("Regeneracion: " + regener2); 
+            System.out.println("Regeneracion: " + regener2);
             System.out.println(imag2);
             System.out.println("****************************************************************************************************************************************************************");
 
@@ -387,7 +387,7 @@ public class combate {
             int ronda2 = 1;
 
             while (vida1 > 0 && vida2 > 0) {
-                if (velocidad1 >= velocidad2) {
+                if (velocidad1 >= velocidad2){
                     System.out.println("JUGADOR 1, empiezas la partida");
 
                         System.out.println("****************************************************************************************************************************************************************");
@@ -417,9 +417,10 @@ public class combate {
                             System.out.println("Vida de JUGADOR1 " + personaje1 + ": " + vida1);
                             System.out.println("Vida de JUGADOR2 " + personaje2 + ": " + vida2);
 
-                        }if (arc == 'e') {
-                            vida2 = 0;
-                            vida1 = 0;
+                        }
+                        if (arc == 'e') {
+                        vida1 = 0;
+                        vida2 = 0;
                         }
 
                         System.out.println("****************************************************************************************************************************************************************");
@@ -466,7 +467,16 @@ public class combate {
                         }
                         System.out.println("\n ");
 
+                    if(vida1>200){
+                        vida1 = 200;
+                    }if(vida2>200){
+                        vida2 = 200;
+                    }if(vida1<0){
+                        vida1 = 0;
+                    }if(vida2<0){
+                        vida2 = 0;
                     }
+                }
 
                 if(velocidad2 >velocidad1) {
                     System.out.println("JUGADOR 2, empiezas la partida");
@@ -541,57 +551,58 @@ public class combate {
                         System.out.print("-");
                     }
                     System.out.println("\n ");
+                    if(vida1>200){
+                        vida1 = 200;
+                    }if(vida2>200){
+                        vida2 = 200;
+                    }if(vida1<0){
+                        vida1 = 0;
+                    }if(vida2<0){
+                        vida2 = 0;
+                    }
 
                 }
-                if(vida1>200){
-                    vida1 = 200;
-                }
-                if(vida2>200){
-                    vida2 = 200;
-                }
-                if(vida1<0){
-                    vida1 = 0;
-                }
-                if(vida2<0){
-                    vida2 = 0;
-                }
+
             }
 
-            if (vida1 <= 0 || vida2 <= 0) {
-                if (vida1 <= 0 && vida2 <= 0) {
-                    System.out.println("****************************************************************************************************************************************************************");
-                    System.out.println("HAS EMPATADO");
-                    System.out.println("****************************************************************************************************************************************************************");
-                }else{
-                    if (vida1 <= 0) {
-                        System.out.println("****************************************************************************************************************************************************************");
-                        System.out.println("JUGADOR 1 HAS MUERTO");
-                        System.out.println("****************************************************************************************************************************************************************");
-                        System.out.println(imag1);
-                        System.out.println("****************************************************************************************************************************************************************");
-                        System.out.println("JUGADOR 2 HAS GANADO");
-                        System.out.println("****************************************************************************************************************************************************************");
-                        System.out.println(imag2);
 
-                    }
-                    if (vida2 <= 0) {
-                        System.out.println("****************************************************************************************************************************************************************");
-                        System.out.println("JUGADOR 2 HAS MUERTO");
-                        System.out.println("****************************************************************************************************************************************************************");
-                        System.out.println(imag2);
-                        System.out.println("****************************************************************************************************************************************************************");
-                        System.out.println("JUGADOR 1 HAS MUERTO");
-                        System.out.println("****************************************************************************************************************************************************************");
-                        System.out.println(imag1);
+            if (vida1 <= 0 && vida2 <= 0) {
+                System.out.println("****************************************************************************************************************************************************************");
+                System.out.println("HAS EMPATADO");
+                System.out.println("****************************************************************************************************************************************************************");
+                System.out.println(imag1);
+                System.out.println(imag2);
+            }else{
+                if (vida1 <= 0) {
+                    System.out.println("****************************************************************************************************************************************************************");
+                    System.out.println("JUGADOR 1 HAS MUERTO");
+                    System.out.println("****************************************************************************************************************************************************************");
+                    System.out.println(imag1);
+                    System.out.println("****************************************************************************************************************************************************************");
+                    System.out.println("JUGADOR 2 HAS GANADO");
+                    System.out.println("****************************************************************************************************************************************************************");
+                    System.out.println(imag2);
 
-                    }
                 }
+                if (vida2 <= 0) {
+                    System.out.println("****************************************************************************************************************************************************************");
+                    System.out.println("JUGADOR 2 HAS MUERTO");
+                    System.out.println("****************************************************************************************************************************************************************");
+                    System.out.println(imag2);
+                    System.out.println("****************************************************************************************************************************************************************");
+                    System.out.println("JUGADOR 1 HAS GANADO");
+                    System.out.println("****************************************************************************************************************************************************************");
+                    System.out.println(imag1);
+
+                }
+
     
             }
 
-        } 
+
 
     }
+}
 
 
 
