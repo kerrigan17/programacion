@@ -2,38 +2,42 @@ package tema2;
 
 import java.util.Scanner;
 
-public class ejercicio4 {
-    public static double euro2dollar(double num){
-        return num * 1.05;
-    }
-
-    public  static double dollartoeuro(double num){
-        return num * 0.95;
-    }
-    public static String menu (char de){
-        if (letter =="D"){
-            return  dollartoeuro(double dinero);
-        }if (letter == "E"){
-            double resultado = de*num;
-            return euro2dollar(double dinero);
-        }else{
-            System.out.println("Tienes que poner 'D' o 'E'.");
-
-        }
-    }
-
+public class ejercicio4 {   
+    
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Si quieres de euros a dolares escribe D; y si quieres dolares a euros escribe E");
-        char de = in.next().charAt(0);
-        System.out.println("¿Cuánto dinero?");
-        double dinero = in.nextInt();
-        if (de == 'e'){
-            return euro2dollar(double num);
-            System.out.println("Tu conversion es:" + euro2dollar());
+        showMenu();
+        int choice = in.nextInt();
+        
+        if (choice == 1){
+            System.out.println("Dame una cantidad de euros");
+            double euros = in.nextDouble();
+            double dollars = euro2dollar(euros);
+            System.out.println("La conversion de " + euros + " euros son " + dollars +" dollares");
+        }if (choice == 2){
+            System.out.println("Dame una cantidad de dolares");
+            double dollars = in.nextDouble();
+            double euros = dollar2euro(dollars);
+            System.out.println("La conversion de " + dollars + " dolares son " + euros +" dollares.");
 
+        }else{
+            System.out.println("Dame un numero");
         }
+    }
+    public static void showMenu() {
+        System.out.println("**** Conversor ****");
+        System.out.println("1. Convertir de euros a dólares");
+        System.out.println("2. Convertir de dólares a euros");
+        System.out.println("Elige una opción: ");
+    }
 
+    public static double euro2dollar(double euros){
+        double cambio = 1.05;
+        return euros * cambio;
+    }
 
+    public  static double dollar2euro(double num){
+        double cambio = 1.05;
+        return num * cambio;
     }
 }
