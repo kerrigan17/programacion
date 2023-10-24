@@ -1,18 +1,9 @@
 package tema2;
-
 import java.util.Scanner;
 
 public class ejercicio2 {
 
-    public static int numberSign(double numero) {
-        if (numero == 0) {
-            return 0;
-        } else if (numero > 0) {
-            return 1;
-        } else {
-            return -1;
-        }
-    }
+
     public static boolean isAdult(int age) {
         if (age >= 18) {
             return true;

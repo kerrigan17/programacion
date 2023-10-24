@@ -1,3 +1,5 @@
+package tema2;
+
 import java.util.Scanner;
 public class ejercicio8 {
     public static void main(String[] args){
@@ -5,7 +7,7 @@ public class ejercicio8 {
         System.out.println("Dame un dia, un mes y un año te dire si es correcta o no.");
         System.out.println("Dame un dia:");
         int dia = in.nextInt();
-        System.out.println("Dame un dia:");
+        System.out.println("Dame un mes:");
         int mes = in.nextInt();
         System.out.println("Dame un año:");
         int anio = in.nextInt();
