@@ -28,7 +28,7 @@ class MyMathTest {
         assertEquals( 0, MyMath.rectanglePerimeter(10, -1), 0.1, "Un lado negativo devuelve perímetro 0");
         assertEquals( 40, MyMath.rectanglePerimeter(10, 10), 0.000000001, "Precisión insuficiente");
     }
-/*
+
     @Test
     void rectangleAreaTest() {
         assertEquals( 100, MyMath.rectangleArea(10, 10), 0.1);
@@ -38,6 +38,8 @@ class MyMathTest {
         assertEquals( 0, MyMath.rectangleArea(10, -10), 0.1, "Un lado negativo devuelve área 0");
         assertEquals( 102.01, MyMath.rectangleArea(10.1, 10.1), 0.000000001, "Precisión insuficiente");
     }
+
+
     @Test
     void circlePerimeterTest() {
         assertEquals( 62.83, MyMath.circlePerimeter(10), 0.1);
@@ -45,6 +47,8 @@ class MyMathTest {
         assertEquals( 0, MyMath.circlePerimeter(-1), 0.1, "Un radio negativo devuelve perímetro 0");
         assertEquals( 62.8318530718, MyMath.circlePerimeter(10), 0.000000001, "Precisión insuficiente");
     }
+
+
     @Test
     void circleAreaTest() {
         assertEquals( 314.16, MyMath.circleArea(10), 0.1);
@@ -52,6 +56,8 @@ class MyMathTest {
         assertEquals( 0, MyMath.circleArea(-1), 0.1, "Un radio negativo devuelve área 0");
         assertEquals( 314.159265359, MyMath.circleArea(10), 0.000000001, "Precisión insuficiente");
     }
+
+
     @Test
     void primeTest() {
         assertFalse(MyMath.isPrime(10), "10 no es primo");
@@ -83,10 +89,11 @@ class MyMathTest {
         assertEquals(0, MyMath.evenFigureCount(1), "1 tiene 0 dígitos pares");
         assertEquals(1, MyMath.evenFigureCount(2), "2 tiene 1 dígito par");
         assertEquals(0, MyMath.evenFigureCount(999), "999 tiene 0 dígitos pares");
-        assertEquals(2, MyMath.evenFigureCount(123), "123 tiene 1 dígitos par");
+        assertEquals(1, MyMath.evenFigureCount(123), "123 tiene 1 dígitos par");
         assertEquals(1, MyMath.evenFigureCount(0), "0 tiene 1 dígito par");
         assertEquals(2, MyMath.evenFigureCount(-100), "-100 tiene 2 dígitos pares");
     }
+
     @Test
     void oddFigureCountTest() {
         assertEquals(1, MyMath.oddFigureCount(1), "1 tiene 1 dígito impar");
@@ -105,6 +112,7 @@ class MyMathTest {
         assertEquals(3628800, MyMath.factorial(10), "10! = 3628800");
         assertEquals(0, MyMath.factorial(-1), "-1! = 0, vamos a suponer que el factorial de un número negativo es 0");
     }
+
     @Test
     void factorialRecursiveTest() {
         assertEquals(2, MyMath.factorialRecursive(2), "2! = 1");
@@ -113,6 +121,8 @@ class MyMathTest {
         assertEquals(3628800, MyMath.factorialRecursive(10), "10! = 3628800");
         assertEquals(0, MyMath.factorialRecursive(-1), "-1! = 0, vamos a suponer que el factorial de un número negativo es 0");
     }
+
+
     @Test
     void quadraticEcuationSolutionsTest() {
         assertEquals(2, MyMath.quadraticEcuationSolutions(-2 , 2, 1), "-2 X2 + 2 X + 1 = 0 has 2 solutions");
@@ -127,5 +137,5 @@ class MyMathTest {
         assertEquals(6, MyMath.figuresSumatory(123), "123 -> Todos los dígitos suman 6");
         assertEquals(6, MyMath.figuresSumatory(-123), "-123 -> Todos los dígitos suman 6");
     }
-*/
+
 }
