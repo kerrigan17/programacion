@@ -141,8 +141,16 @@ public class MyMath {
             return 0;
         }
     }
-    public static int figuresSumatory(int num){
+    public static int figuresSumatory(int numero){
         int suma= 0;
+        numero = Math.abs(numero);
+        while (numero != 0) {
+            suma += numero % 10;
+            numero /= 10;
+        }
+
+        return suma;
     }
+
 
 }
