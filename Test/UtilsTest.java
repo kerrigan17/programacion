@@ -35,7 +35,7 @@ class UtilsTest {
         assertEquals( -3.86, Utils.getNetPrice(-3.191, 21.0), 0.001);
         assertEquals( -3.87, Utils.getNetPrice(-3.199, 21.0), 0.001);
     }
-/*
+
     @Test
     void getCoinsTest() {
         assertEquals( 0, Utils.getCoins(0));
@@ -48,7 +48,7 @@ class UtilsTest {
     void getNIFTest() {
         assertEquals( 'Z', Utils.getNIF(12345678));
     }
-
+/*
     @Test
     void isValidNIFTest() {
         assertTrue(Utils.isValidNIF(12345678,'Z'));
