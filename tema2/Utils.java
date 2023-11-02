@@ -43,11 +43,6 @@ public class Utils {
         }
         return monedas;
     }
-    public static char getNIF(double NIF){
-        int letra = NIF % 23;
-        switch (letra){
-            case 0
-        }
-    }
+
 
 }
