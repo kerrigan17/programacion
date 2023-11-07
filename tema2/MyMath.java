@@ -1,72 +1,77 @@
 public class MyMath {
+
     public static double squarePerimeter(double lado){
+        double resultado = 0;
         if (lado < 0){
-            return 0;
+            resultado = 0;
 
         }else {
-            return lado*4;
+            resultado = lado*4;
         }
+        return resultado;
     }
     public static double squareArea(double base) {
+        double resultado = 0;
         if (base<0){
-            return 0;
+            resultado = 0;
         }else {
-            return  base * base;
+            resultado = base * base;
         }
+        return resultado;
     }
     public static double rectanglePerimeter(double base, double altura){
+        double resultado = 0;
         if (base <= 0 || altura <=0){
-            return 0;
+            resultado = 0;
         }else {
-            return 2*base + 2*altura;
+            resultado = 2*base + 2*altura;
         }
+        return resultado;
     }
     public static double rectangleArea(double base, double altura ){
+        double resultado = 0;
         if (base <=0 || altura<=0){
-            return 0;
+            resultado  = 0;
         }else {
-            return  base * altura;
+            resultado =  base * altura;
         }
+        return resultado;
     }
     public  static double circlePerimeter(double num){
+        double resultado = 0;
         if (num<=0){
-            return 0;
+            resultado = 0;
         }else {
-            return 2*num*Math.PI;
+            resultado = 2*num*Math.PI;
         }
+        return resultado;
     }
     public static double circleArea(double radio){
+        double resultado = 0;
         if (radio <=0){
-            return 0;
+            resultado = 0;
         }else {
-            return Math.PI * (radio*radio);
+            resultado= Math.PI * (radio*radio);
         }
+        return resultado;
     }
     public static boolean isPrime(int numero){
+        boolean resultado;
         if (numero <= 1) {
-            return false;
+            resultado = false;
         }else {
             for (int i = 2; i <= Math.sqrt(numero); i++) {
                 if (numero % i == 0) {
-                    return false;
+                    resultado = false;
                 }
 
             }
-            return true;
+            resultado = true;
         }
+        return resultado;
     }
     public static boolean isNotPrime(int numero){
-        if (numero <= 1) {
-            return true;
-        }else {
-            for (int i = 2; i <= Math.sqrt(numero); i++) {
-                if (numero % i == 0) {
-                    return true;
-                }
-
-            }
-            return false;
-        }
+        return !isPrime(numero);
     }
     public static int figureCount(int numero) {
         int cifras = 0;
@@ -97,6 +102,8 @@ public class MyMath {
 
     }
     public static int oddFigureCount(int numero){
+
+        // return totaldigitos - pares
         int cifras =0;
         numero = Math.abs(numero);
             while (numero != 0) {
@@ -109,37 +116,33 @@ public class MyMath {
 
     }
     public static int factorial(int num){
+        int resultado = 0;
         int fact = 1;
-        if (num == -1){
-            return 0;
+        if (num < 0){
+            resultado = 0;
         }else {
             for (int i = 1; i <= num; i++){
                     fact = fact * i;
             }
-            return fact;
+            resultado = fact;
         }
+        return resultado;
     }
     public static int factorialRecursive(int num){
-        int fact = 1;
-        if (num == -1){
-            return 0;
-        }else {
-            for (int i = 1; i <= num; i++){
-                fact = fact * i;
-            }
-            return fact;
-        }
+        return factorial(num);
     }
 
     public static int quadraticEcuationSolutions(int num1, int num2, int num3){
-        int ecuation = num2*2 - 4*num1*num3;
-        if (ecuation == 0 ){
-            return 1;
-        }if (ecuation > 0){
-            return 2;
+        int resultado = 0;
+        int discriminant = num2*2 - 4*num1*num3;
+        if (discriminant == 0 ){
+            resultado = 1;
+        }else if (discriminant > 0){
+            resultado = 2;
         }else {
-            return 0;
+            resultado = 0;
         }
+        return resultado;
     }
     public static int figuresSumatory(int numero){
         int suma= 0;
