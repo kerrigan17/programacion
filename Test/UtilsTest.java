@@ -43,7 +43,7 @@ class UtilsTest {
         assertEquals( 10000001, Utils.getCoins(2.01));
         assertEquals( 10100001, Utils.getCoins(2.51));
     }
-/*
+
     @Test
     void getNIFTest() {
         assertEquals( 'Z', Utils.getNIF(12345678));
@@ -55,6 +55,6 @@ class UtilsTest {
         assertTrue(Utils.isValidNIF(12345678,'z'));
         assertFalse(Utils.isValidNIF(12345678,'A'));
     }
-*/
+
 
 }
