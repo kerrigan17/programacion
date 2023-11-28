@@ -149,10 +149,22 @@ public class ej1 {
         }
         return suma;
     }
-    //public static int [] invertirArray(int[] array){
-    //    createArray();
-
-    //}
+    public static int [] invertirArray(int[] array){
+        int [] newArray = new int[array.length];
+        for (int i = 0; i<= array.length; i--){
+            newArray [i] =
+        }
+        return array;
+    }
+    static boolean esCapicua(int[] array) {
+        int longitud = array.length;
+        for (int i = 0; i < longitud / 2; i++) {
+            if (array[i] != array[longitud - 1 - i]) {
+                return false;
+            }
+        }
+        return true;
+    }
     public static void main (String[] args){
         showMenu();
 
@@ -160,15 +172,19 @@ public class ej1 {
         if (letter=='a'){
             imprimirArray();
         }if (letter=='b'){
+            System.out.println("Te voy a decir el numero más alto de tu array");
             createArray();
             System.out.println(Arrays.toString(maxnumber(array)));
         }if (letter=='c'){
+            System.out.println("Te voy a decir el numero menor de tu array");
             createArray();
             System.out.println(Arrays.toString(minnumber(array)));
         }if (letter=='d'){
+            System.out.println("Te voy a dar la  media de tu array");
             createArray();
             System.out.println(Arrays.toString(average(array)));
         }if (letter=='e'){
+            System.out.println("Dame un numero y te digo si esta en mi array");
             existing();
         }if (letter=='f'){
             System.out.println(Arrays.toString(sumaVectortes()));
@@ -179,16 +195,21 @@ public class ej1 {
         }if (letter=='i'){
             createArray();
         }if (letter=='j'){
-
+            createArray();
+            System.out.println(invertirArray(array));
         }if (letter=='k'){
-
         }if (letter=='l'){
-
-
-
+            createArray();
+            if (esCapicua(array)) {
+                System.out.println("El array es capicúa.");
+            } else {
+                System.out.println("El array no es capicúa.");
+            }
         }
 
     }
+
+
 
 
 
