@@ -152,7 +152,7 @@ public class ej1 {
     public static int [] invertirArray(int[] array){
         int [] newArray = new int[array.length];
         for (int i = 0; i<= array.length; i--){
-            newArray [i] =
+            //newArray [i] =
         }
         return array;
     }

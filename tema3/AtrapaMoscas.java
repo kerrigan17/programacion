@@ -9,7 +9,7 @@ public class AtrapaMoscas {
 
     public static void main(String[] args){
 
-        array = new int []{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0};
+        array = new int []{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
         System.out.println("Busca la mosca! Debes de poner un numero del 0 al 15, y si no aciertas, cambiara aleatoriamente");
         boolean cazada = false;
