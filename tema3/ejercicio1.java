@@ -1,8 +1,4 @@
-
-
-import java.util.Arrays;
-import java.util.Scanner;
-
+/*
 public class ejercicio1 {
     static Scanner in = new Scanner(System.in);
     static int [] array = new int[0];
@@ -99,12 +95,11 @@ public class ejercicio1 {
         showMenu();
         //System.out.println("Tus numeros son: " + Arrays.toString(createArray()));
         char eleccionLetra = in.next().charAt(0);
-        switch(eleccionLetra){
-            case 
-        }
+
         sumaVectores();
     }
 
 
 
 }
+*/
