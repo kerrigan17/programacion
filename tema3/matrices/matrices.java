@@ -1,4 +1,4 @@
-package matrices;
+/*package matrices;
 public class matrices {
     private int[][] matrix;
     private int rows;
@@ -129,3 +129,4 @@ public class matrices {
         System.out.println("Repeticiones de 1: " + matrix.countOccurrences(1));
     }
 }
+*/

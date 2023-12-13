@@ -1,4 +1,3 @@
-package repaso;
 
 import java.util.Scanner;
 
@@ -37,10 +36,25 @@ public class ev2021 {
         
         System.out.println("Cantidad de billetes que desea comprar");
         int cantbilletes = in.nextInt();
-        int [] edad = new int[cantbilletes] ;
+        int [] edad = new int[cantbilletes];
         for(int i=1; i<=edad.length; i++){
-            System.out.println("Pasajero "+ i +":");
+            System.out.println("Pasajero "+ (i+1) +":");
             edad[i]=in.nextInt();
+            if (edad[i] >= 0 && edad[i] <= 120) {
+                if (edad[i] >= 65) {
+                    precio *= 0.90;
+                } else if (edad[i] >= 12 && edad[i] <= 15) {
+                    precio *= 0.92;
+                } else if (edad[i] >= 4 && edad[i] <= 11) {
+                    precio *= 0.65;
+                } else if (edad[i] < 4) {
+                    precio = 0;
+                }
+                preciofinal += precio;
+            } else {
+                System.out.println("Edad no válida. Ingrese una edad entre 0 y 120.");
+                i--;
+            }
             
         }
         return preciofinal;
@@ -57,7 +71,8 @@ public class ev2021 {
                     exit = false;
                     break;
                 case 'b':
-                    billetes();
+                    double total = billetes();
+                    System.out.println("Precio total: " + total);
                     exit = false;
                     break;
                 case 'c': 
