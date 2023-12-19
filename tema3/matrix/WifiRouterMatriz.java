@@ -1,4 +1,4 @@
-package Tema3;
+package matrix;
 import java.util.Scanner;
 
 public class WifiRouterMatriz {
