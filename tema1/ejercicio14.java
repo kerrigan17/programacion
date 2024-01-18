@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ejercicio14 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("¿Cuántas personas?");
+        System.out.println("¿Cuántas metodos.personas?");
         int personas = in.nextInt();
         System.out.println("¿Cuántos días?");
         int dias = in.nextInt();

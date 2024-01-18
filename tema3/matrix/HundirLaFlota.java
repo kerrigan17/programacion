@@ -1,3 +1,5 @@
+package matrix;
+
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
@@ -130,7 +132,7 @@ public class HundirLaFlota {
                 convertedColumn = 10;
                 break;
             default:
-                convertedColumn = -1; // O cualquier valor que desees para indicar un valor inválido
+                convertedColumn = -1;
                 break;
         }
         return convertedColumn;

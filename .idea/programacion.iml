@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tema2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tema3" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/repaso" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tema4" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/TEst" />
     </content>
     <orderEntry type="inheritedJdk" />

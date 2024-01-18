@@ -1,5 +1,4 @@
 package matrix;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class MyMatriz {
@@ -113,7 +112,6 @@ public class MyMatriz {
 
     public static String MatrizUnidad(int[][] MyMatriz) {
         String comprobacion = "No es unidad";
-
         for (int x = 0; x < MyMatriz.length; x++) {
             for (int y = 0; y < MyMatriz[x].length; y++) {
                 if (MyMatriz[x][x] == 1 && x == y) {
