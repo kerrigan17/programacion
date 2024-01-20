@@ -1,3 +1,4 @@
+package repasot3;
 public class persona {
     public static void main(String[] args) {
         datos celia = new datos();

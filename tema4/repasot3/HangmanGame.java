@@ -1,3 +1,4 @@
+package repasot3;
 import java.util.Scanner;
 
 class HangmanGame {

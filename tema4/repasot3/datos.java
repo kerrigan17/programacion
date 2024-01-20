@@ -1,3 +1,4 @@
+package repasot3;
 public class datos {
     private String name;
     private int age;
