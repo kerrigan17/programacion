@@ -1,43 +1,45 @@
+
+
 package POO;
 
 public class Reloj {
-    private int minuts;
-    private static int hours;
+
+    private int hours;
+    private int minutes;
     private int seconds;
     private final int PORDEFECTO = 0;
 
 
     public Reloj() {
-        this.hours = PORDEFECTO;
-        this.minuts = PORDEFECTO;
-        this.seconds = PORDEFECTO;
-    }
+      this.hours = PORDEFECTO;
+      this.minutes = PORDEFECTO;
+      this.seconds = PORDEFECTO;
+  }
 
-    public Reloj(int hours, int minuts, int seconds) {
+  public Reloj(int hours, int minuts) {
+    if (hours < 0 || hours >= 24) {
+        throw new IllegalArgumentException("La hora debe estar entre 0 y 23");
+    }
+    if (minutes < 0 || minutes >= 60) {
+        throw new IllegalArgumentException("Los minutos deben estar entre 0 y 59");
+    }
+      this.hours = hours;
+      this.minutes = minuts;
+      this.seconds = PORDEFECTO;
+  }
+
+    public Reloj(int hours, int minutes, int seconds) {
+        if (hours < 0 || hours >= 24) {
+            throw new IllegalArgumentException("La hora debe estar entre 0 y 23");
+        }
+        if (minutes < 0 || minutes >= 60) {
+            throw new IllegalArgumentException("Los minutos deben estar entre 0 y 59");
+        }
+        if (seconds < 0 || seconds >= 60) {
+            throw new IllegalArgumentException("Los segundos deben estar entre 0 y 59");
+        }
         this.hours = hours;
-        this.minuts = minuts;
-        this.seconds = seconds;
-    }
-
-    public Reloj(int hours, int minuts) {
-        this.hours = hours;
-        this.minuts = minuts;
-        this.seconds = PORDEFECTO;
-    }
-
-    int getMinuts() {
-        return minuts;
-    }
-
-    public void setMinuts(int minuts) {
-        this.minuts = minuts;
-    }
-
-    public int getSeconds() {
-        return seconds;
-    }
-
-    public void setSeconds(int seconds) {
+        this.minutes = minutes;
         this.seconds = seconds;
     }
 
@@ -46,42 +48,47 @@ public class Reloj {
     }
 
     public void setHours(int hours) {
-        if (hours < 0) {
-            System.out.println("Tus parametros no pueden ser menor que 0, tus horas son 0");
+        if (hours < 0 || hours >= 24) {
+            throw new IllegalArgumentException("La hora debe estar entre 0 y 23");
         }
-        if (hours >= 24) {
-            hours -= 24;
-        }
-        hours = PORDEFECTO;
         this.hours = hours;
     }
 
-    public static void compobarhours(int hours) {
-        if (hours < 0) {
-            System.out.println("Tus parametros no pueden ser menor que 0, tus horas son 0");
+    public int getMinutes() {
+        return minutes;
+    }
+
+    public void setMinutes(int minutes) {
+        if (minutes < 0 || minutes >= 60) {
+            throw new IllegalArgumentException("Los minutos deben estar entre 0 y 59");
         }
-        if (hours > 24) {
-            hours -= 24;
+        this.minutes = minutes;
+    }
+
+    public int getSeconds() {
+        return seconds;
+    }
+
+    public void setSeconds(int seconds) {
+        if (seconds < 0 || seconds >= 60) {
+            throw new IllegalArgumentException("Los segundos deben estar entre 0 y 59");
+        }
+        this.seconds = seconds;
+    }
+
+    public void incrementTime(int seconds) {
+        this.seconds += seconds;
+        while (this.seconds >= 60) {
+            this.seconds -= 60;
+            this.minutes++;
+        }
+        while (this.minutes >= 60) {
+            this.minutes -= 60;
+            this.hours++;
         }
     }
 
-
-    public static void comprobarminuts(int minuts, int hours) {
-        if (minuts < 0 && minuts>60) {
-            System.out.println("Tus parametros no pueden ser menor que 0, tus horas son 0");
-
-        }
+    public String toString() {
+        return String.format("%02d:%02d:%02d", hours, minutes, seconds);
     }
-    public static void comprobarseconds(int seconds) {
-        if (seconds < 0) {
-            System.out.println("Tus parametros no pueden ser menor que 0, tus horas son 0");
-        }
-    }
-    public static void showhours(int hours, int minuts, int seconds){
-        compobarhours(hours);
-        comprobarminuts(minuts);
-        comprobarseconds(seconds);
-    }
-
 }
-    
