@@ -10,13 +10,12 @@ public class Hero {
   private int experience;
   private int attack;
   private int defense;
-  private static int POR_DEFECTO=200;
 
-  public Hero(String name, int level, int health,int experience,int attack,int defense){
+  public Hero(String name, int level, int health, int maxHealth, int attack, int experience,int defense){
     this.name=name;
     this.level=level;
     this.health=health;
-    this.maxHealth=POR_DEFECTO;
+    this.maxHealth=maxHealth;
     this.experience=experience;
     this.attack=attack;
     this.defense=defense;
@@ -65,15 +64,16 @@ public class Hero {
       this.defense = defense;
   }
 
-  public static int drinkPotion(Hero hero){
-    int newHealth=hero.getHealth()+10;
-    return newHealth;
+  public void drinkPotion() {
+    int newHealth = health + 10;
+    this.setHealth(newHealth);
   }
 
-  public static int rest (Hero hero){
-    int newHealth=hero.getHealth()+50;
-    return newHealth;
+  void rest(){
+    int newHealth=this.getHealth()+50;
+    this.setHealth(newHealth);
   }
+
   private void levelUp() {
     level++;
     health += 5;
@@ -82,39 +82,33 @@ public class Hero {
     experience = 0;
   }
 
-  public static int attack(Hero hero, Hero otherHero) {
-    int damage = Math.max(1, hero.getAttack() - otherHero.getDefense());
+  public void attack(Hero otherHero) {
+    int damage = Math.max(1, this.getAttack() - otherHero.getDefense());
     int newHealth = otherHero.getHealth() - damage;
-    hero.setExperience(hero.getExperience() + 10);
-    if (hero.getExperience() >= 50) {
-      hero.levelUp();
+    otherHero.setHealth(newHealth);
+    setExperience(getExperience() + 10);
+    if (getExperience() >= 50) {
+      levelUp();
     }
-    return newHealth;
   }
 
-  public static void toString (Hero hero, Hero hero2){
-    System.out.println("Nombre: " + hero.getName());
-    System.out.println("Nivel: " + hero.getLevel());
-    System.out.println("Nivel: " + hero.getMaxHealth());
-    System.out.println("Vida: " + hero.getHealth());
-    System.out.println("Defensa: " + hero.getDefense());
-    System.out.println("Ataque: " + hero.getAttack());
-    System.out.println("Experiencia: "+hero.getExperience());
+  public String toString (){
+
+    System.out.println("Nombre: " + name);
+    System.out.println("Nivel: " + level);
+    System.out.println("MaxHealth: " + maxHealth);
+    System.out.println("Vida: " +health);
+    System.out.println("Defensa: " + defense);
+    System.out.println("Ataque: " + attack);
+    System.out.println("Experiencia: "+ experience);
     System.out.println("**********************");
-
-    System.out.println("Estado inicial:");
-    System.out.println("Hero1: " + hero.getHealth());
-    System.out.println("Hero2: " + hero2.getHealth());
-
+    return "Heroe -> " + name +
+            "\n Nivel ->" +level+
+            "\n Vida maxima ->" +maxHealth+
+            "\n Vida ->" +health+
+            "\n Defensa ->" +defense+
+            "\n Ataque ->" +attack;
   }
-  public static void toString1 (Hero hero, Hero hero2){
-    System.out.println("\nDespués del ataque:");
-    System.out.println("Hero1: " + hero.getHealth());
-    System.out.println("Hero2: " + hero2.getHealth());
 
-    System.out.println("\nDespués de beber poción y descansar:");
-    System.out.println("Hero1: " + hero.getHealth());
-    System.out.println("Hero2: " + hero2.getHealth());
-  }
 
 }
