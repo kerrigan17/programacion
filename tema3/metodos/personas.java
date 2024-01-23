@@ -1,4 +1,4 @@
-package metodos;
+package tema3.metodos;
 
 public class personas {
     personas persona = new personas();

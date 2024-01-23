@@ -106,5 +106,9 @@ public class Persona {
     return isCorrect;
 
   }
+  public String getNivel() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getNivel'");
+  }
 
 }

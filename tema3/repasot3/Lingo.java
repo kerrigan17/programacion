@@ -1,4 +1,4 @@
-package repasot3;
+package tema3.repasot3;
 import java.util.Scanner;
 
 public class Lingo {

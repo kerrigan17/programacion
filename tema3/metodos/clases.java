@@ -1,4 +1,8 @@
-package metodos;
+
+
+
+
+package tema3.metodos;
 
 public class clases {
 

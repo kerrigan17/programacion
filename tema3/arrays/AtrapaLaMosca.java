@@ -1,4 +1,4 @@
-package Tema3;
+package tema3.arrays;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;

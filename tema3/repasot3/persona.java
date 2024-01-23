@@ -1,4 +1,4 @@
-package repasot3;
+package tema3.repasot3;
 public class persona {
     public static void main(String[] args) {
         datos celia = new datos();

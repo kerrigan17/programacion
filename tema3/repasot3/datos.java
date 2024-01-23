@@ -1,4 +1,4 @@
-package repasot3;
+package tema3.repasot3;
 public class datos {
     private String name;
     private int age;

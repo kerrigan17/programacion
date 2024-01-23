@@ -1,4 +1,4 @@
-package repasot3;
+package tema3.repasot3;
 import java.util.Scanner;
 
 public class CaesarCipher {
@@ -40,6 +40,11 @@ public class CaesarCipher {
                   mensajeDescifrado.append('Z');
               } else {
                   mensajeDescifrado.append((char) (caracter - 1));
+
+
+
+
+
               }
           } else if (Character.isDigit(caracter)) {
               if (caracter == '0') {
