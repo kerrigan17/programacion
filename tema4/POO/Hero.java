@@ -83,6 +83,7 @@ public class Hero {
   }
 
   public void attack(Hero otherHero) {
+    System.out.println(name + " ha golpeado a " + otherHero.getName());
     int damage = Math.max(1, this.getAttack() - otherHero.getDefense());
     int newHealth = otherHero.getHealth() - damage;
     otherHero.setHealth(newHealth);
@@ -93,7 +94,6 @@ public class Hero {
   }
 
   public String toString (){
-
     System.out.println("Nombre: " + name);
     System.out.println("Nivel: " + level);
     System.out.println("MaxHealth: " + maxHealth);
@@ -102,12 +102,7 @@ public class Hero {
     System.out.println("Ataque: " + attack);
     System.out.println("Experiencia: "+ experience);
     System.out.println("**********************");
-    return "Heroe -> " + name +
-            "\n Nivel ->" +level+
-            "\n Vida maxima ->" +maxHealth+
-            "\n Vida ->" +health+
-            "\n Defensa ->" +defense+
-            "\n Ataque ->" +attack;
+    return "Heroe -> " + name + "\n Nivel ->" +level+"\n Vida maxima ->" +maxHealth+"\n Vida ->" +health+"\n Defensa ->" +defense+"\n Ataque ->" +attack;
   }
 
 
