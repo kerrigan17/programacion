@@ -6,10 +6,10 @@ public class HeroMain {
   public static Scanner in = new Scanner(System.in);
 
   public static void main(String[] args) {
-    Hero heroe1 = new Hero("Mina Dinamita", 1, 150, 300, 150, 0, 25);
-    Hero heroe2 = new Hero("Ajo Arriero", 1, 120, 300 ,120, 0, 20);
-    Hero heroe3 = new Hero("Pajaro loco", 1, 100, 300, 100, 0, 15);
-    Hero heroe4 = new Hero("Oso poderoso", 1, 200, 300, 200, 0, 20);
+    Hero heroe1 = new Hero("Mina Dinamita", 1, 150, 300, 120, 0, 30);
+    Hero heroe2 = new Hero("Ajo Arriero", 1, 120, 300 ,120, 0, 60);
+    Hero heroe3 = new Hero("Pajaro loco", 1, 150, 300, 100, 0, 50);
+    Hero heroe4 = new Hero("Oso poderoso", 1, 170, 300, 100, 0, 30);
 
     System.out.println("Selecciona personaje:");
     System.out.println("1. Mina Dinamita");
