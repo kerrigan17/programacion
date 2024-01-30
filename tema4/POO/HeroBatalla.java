@@ -30,7 +30,7 @@ public class HeroBatalla {
             System.out.println(hero);
             System.out.println(heroes[1]);
             System.out.println(hero.getName() + " ha golpeado a " + heroes[0].getName());
-            hero.setAttack(heroes[random]);
+            hero.setAttack(heroes);
             System.out.println("Apreta S, si quieres salir de la batalla, apreta cualquier otra metra si quieres seguir");
             String letter = in.nextLine().toLowerCase();
             if (letter.equals("s")){
