@@ -2,7 +2,7 @@ package POO;
 
 import java.util.Arrays;
 
-public class PersonaCuenta {
+public class CuentaPersona {
     private String dni;
     private int [] cuentas;
 
@@ -22,7 +22,7 @@ public class PersonaCuenta {
         this.cuentas = cuentas;
     }
 
-    public PersonaCuenta(String dni, int [] cuentas){
+    public CuentaPersona(String dni, int [] cuentas){
         this.dni=dni;
         this.cuentas=cuentas;
     }
