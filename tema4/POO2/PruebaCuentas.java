@@ -5,12 +5,13 @@ import java.util.Scanner;
 
 public class PruebaCuentas {
 
-    private static ArrayList<Persona> personas = new ArrayList<>();
-    private static Scanner in = new Scanner(System.in);
+    static ArrayList<Persona> personas = new ArrayList<>();
+    static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
+        boolean salir = false;
         int opcion;
-        do {
+        while (!salir){
             mostrarMenu();
             opcion = in.nextInt();
             in.nextLine();
@@ -63,11 +64,12 @@ public class PruebaCuentas {
                     break;
                 case 8:
                     System.out.println("¡Hasta pronto!");
+                    salir =true;
                     break;
                 default:
                     System.out.println("Opción no válida. Introduzca un número entre 1 y 8.");
             }
-        } while (opcion != 8);
+        }
     }
 
     private static void mostrarMenu() {
@@ -89,7 +91,7 @@ public class PruebaCuentas {
         String dni = in.nextLine();
         Persona persona = new Persona(dni);
         personas.add(persona);
-        System.out.println("Hola, "+" con dni: " + dni + " creada!");
+        System.out.println("Usuario con dni: " + dni + " creado!");
     }
 
     private static void asociarCuenta() {
