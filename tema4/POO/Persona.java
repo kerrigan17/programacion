@@ -26,7 +26,7 @@ public class Persona {
     this.age = age;
     this.dni=POR_DEFECTO;
   }
-  String getDni(){
+  public String getDni(){
     return dni;
   }
   public void setDni(String dni){
@@ -110,5 +110,13 @@ public class Persona {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'getNivel'");
   }
+public void setDNI(String dni2) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'setDNI'");
+}
+public void setLastName(String apellido) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'setLastName'");
+}
 
 }
