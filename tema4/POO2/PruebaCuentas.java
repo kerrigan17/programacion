@@ -1,3 +1,5 @@
+package POO2;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,6 +13,7 @@ public class PruebaCuentas {
         do {
             mostrarMenu();
             opcion = in.nextInt();
+            in.nextLine();
             switch (opcion) {
                 case 1:
                     crearPersona();
@@ -22,13 +25,38 @@ public class PruebaCuentas {
                     mostrarDatosPersona();
                     break;
                 case 4:
-                    recibirNomina();
+                    System.out.println("Tienes que ingresar el dni de la persona, numero de cuenta, y cantidad que desea ingresar");
+                    System.out.println("Dame el dni de la persona");
+                    String dniin = in.nextLine();
+                    System.out.println("Dame el numero de cuenta");
+                    int cuentain = in.nextInt();
+                    System.out.println("Dame el importe que quieres ingresar");
+                    Double importe = in.nextDouble();
+                    recibirNomina(dniin, cuentain,importe);
                     break;
                 case 5:
-                    pagarRecibo();
+                System.out.println("Tienes que ingresar el dni de la persona, numero de cuenta, y cantidad que desea pagar");
+                    System.out.println("Dame el dni de la persona");
+                    String dnipa = in.nextLine();
+                    System.out.println("Dame el numero de cuenta");
+                    int cuentapa = in.nextInt();
+                    System.out.println("Dame el importe que quieres ingresar");
+                    Double pago = in.nextDouble();
+                    pagarRecibo(dnipa, cuentapa, pago);
                     break;
                 case 6:
-                    realizarTransferencia();
+                    System.out.println("String dniOrigen, int numeroCuentaOrigen, String dniDestino, int numeroCuentaDestino, double cantidad");
+                    System.out.println("Dame el dni de origen");
+                    String dnior = in.nextLine();
+                    System.out.println("Dame el numero de cuenta origen");
+                    int cuentaor = in.nextInt();
+                    System.out.println("Dame el dni del receptor");
+                    String dnire = in.nextLine();
+                    System.out.println("Dame el numero de cuenta del receptor");
+                    int cuentare = in.nextInt();
+                    System.out.println("Dame la cantidad de la tranferencia");
+                    int tranferencia = in.nextInt();
+                    realizarTransferencia(dnior, cuentaor, dnire, cuentare,tranferencia);
                     break;
                 case 7:
                     imprimirMorosos();
@@ -61,7 +89,7 @@ public class PruebaCuentas {
         String dni = in.nextLine();
         Persona persona = new Persona(dni);
         personas.add(persona);
-        System.out.println("Persona " + dni + " creada!");
+        System.out.println("Hola, "+" con dni: " + dni + " creada!");
     }
 
     private static void asociarCuenta() {
@@ -75,7 +103,7 @@ public class PruebaCuentas {
             System.out.println("Introduzca el saldo disponible: ");
             double saldoDisponible = in.nextDouble();
             Cuenta cuenta = new Cuenta(numeroCuenta, saldoDisponible);
-            persona.addCuenta(cuenta);
+            persona.addCuentaBancaria(cuenta);
             System.out.println("Cuenta " + numeroCuenta + " añadida a la persona " + dni);
         } else {
             System.out.println("Persona no encontrada.");
@@ -103,15 +131,6 @@ public class PruebaCuentas {
         }
     }
 
-    private static void recibirNomina() {
-        System.out.println("**Recibir nómina**");
-        System.out.println("Introduzca el DNI de la persona: ");
-        String dni = in.nextLine();
-        System.out.println("Introduzca el número de cuenta: ");
-        int numeroCuenta = in.nextInt();
-        System.out.println("Introduzca");
-    }
-
     private static void imprimirMorosos() {
         System.out.println("**Personas morosas**");
         for (Persona persona : personas) {
@@ -120,34 +139,13 @@ public class PruebaCuentas {
             }
         }
     }
-    private static void realizarTransferencia() {
-        System.out.println("**Realizar transferencia**");
-        System.out.println("Introduzca el DNI de la persona que envía la transferencia: ");
-        String dniOrigen = in.nextLine();
-        System.out.println("Introduzca el número de cuenta de origen: ");
-        int numeroCuentaOrigen = in.nextInt();
-        System.out.println("Introduzca el DNI de la persona que recibe la transferencia: ");
-        String dniDestino = in.nextLine();
-        System.out.println("Introduzca el número de cuenta de destino: ");
-        int numeroCuentaDestino = in.nextInt();
-        System.out.println("Introduzca la cantidad a transferir: ");
-        double cantidad = in.nextDouble();
-    
-        Persona personaOrigen = buscarPersonaPorDNI(dniOrigen);
-        Persona personaDestino = buscarPersonaPorDNI(dniDestino);
-        if (personaOrigen != null && personaDestino != null) {
-            Cuenta cuentaOrigen = buscarCuentaPorNumero(personaOrigen, numeroCuentaOrigen);
-            Cuenta cuentaDestino = buscarCuentaPorNumero(personaDestino, numeroCuentaDestino);
-            if (cuentaOrigen != null && cuentaDestino != null) {
-                if (cuentaOrigen.getSaldoDisponible() >= cantidad) {
-                    cuentaOrigen.setSaldoDisponible(cuentaOrigen.getSaldoDisponible() - cantidad);
-                    cuentaDestino.setSaldoDisponible(cuentaDestino.getSaldoDisponible() + cantidad);
-                    System.out.println("Transferencia de " + cantidad + "€ realizada con éxito!");
-                    System.out.println("Saldo cuenta origen: " + cuentaOrigen.getSaldoDisponible() + "€");
-                    System.out.println("Saldo cuenta destino: " + cuentaDestino.getSaldoDisponible() + "€");
-                } else {
-                    System.out.println("Saldo insuficiente en la cuenta origen.");
-                }
+    private static void recibirNomina(String dni, int numeroCuenta, double cantidad) {
+        Persona persona = buscarPersonaPorDNI(dni);
+        if (persona != null) {
+            Cuenta cuenta = persona.buscarCuentaPorNumero(numeroCuenta);
+            if (cuenta != null) {
+                cuenta.realizarAbono(cantidad);
+                System.out.println("Nómina de " + cantidad + "€ añadida a la cuenta " + numeroCuenta + " de " + persona.getDni());
             } else {
                 System.out.println("Cuenta no encontrada.");
             }
@@ -155,4 +153,44 @@ public class PruebaCuentas {
             System.out.println("Persona no encontrada.");
         }
     }
+    
+    private static void pagarRecibo(String dni, int numeroCuenta, double importe) {
+        Persona persona = buscarPersonaPorDNI(dni);
+        if (persona != null) {
+            Cuenta cuenta = persona.buscarCuentaPorNumero(numeroCuenta);
+            if (cuenta != null) {
+                cuenta.pagarRecibo(importe);
+            } else {
+                System.out.println("Cuenta no encontrada.");
+            }
+        } else {
+            System.out.println("Persona no encontrada.");
+        }
+    }
+    
+    private static void realizarTransferencia(String dniOrigen, int numeroCuentaOrigen, String dniDestino, int numeroCuentaDestino, double cantidad) {
+        Persona personaOrigen = buscarPersonaPorDNI(dniOrigen);
+        Persona personaDestino = buscarPersonaPorDNI(dniDestino);
+        if (personaOrigen != null && personaDestino != null) {
+            Cuenta cuentaOrigen = personaOrigen.buscarCuentaPorNumero(numeroCuentaOrigen);
+            Cuenta cuentaDestino = personaDestino.buscarCuentaPorNumero(numeroCuentaDestino);
+            if (cuentaOrigen != null && cuentaDestino != null) {
+                if (cuentaOrigen.getSaldoDisponible() >= cantidad) {
+                    cuentaOrigen.setSaldoDisponible(cuentaOrigen.getSaldoDisponible() - cantidad);
+                    cuentaDestino.setSaldoDisponible(cuentaDestino.getSaldoDisponible() + cantidad);
+                    System.out.println("Transferencia de " + cantidad + "€ realizada con éxito!");
+                    System.out.println("Saldo cuenta origen: " + cuentaOrigen.getSaldoDisponible() + "€");
+                    System.out.println("Saldo cuenta destino: " + cuentaDestino.getSaldoDisponible() + "€");
+            } else {
+                System.out.println("Saldo insuficiente en la cuenta origen.");
+            }
+        } else {
+            System.out.println("Cuenta no encontrada.");
+        }
+    } else {
+        System.out.println("Persona no encontrada.");
+    }
+}
+
+    
 }
