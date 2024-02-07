@@ -1,4 +1,4 @@
-package Herencia;
+package Herencia.Ejemplo;
 
 public class AnimalDomestico {
     protected String nombre;
@@ -6,7 +6,6 @@ public class AnimalDomestico {
     protected double peso;
     protected String color;
     protected String ruido;
-    protected boolean venir;
     protected static final String DEFAULT = "Desconcido";
     protected static final int DEFAULT_PESO = 0;
 
@@ -47,37 +46,22 @@ public class AnimalDomestico {
         this.raza=DEFAULT;
         this.peso=DEFAULT_PESO;
         this.color=DEFAULT;
-        this.ruido=DEFAULT;
-        this.venir=true;
     }
 
     public String getRuido() {
         return ruido;
     }
 
-    public boolean isVenir() {
-        return venir;
-    }
-
-    public void setVenir(boolean venir) {
-        this.venir = venir;
-    }
 
     public void setRuido(String ruido) {
         this.ruido = ruido;
     }
 
-    public AnimalDomestico (String nombre, String raza, int peso, String color){
+    public AnimalDomestico (String nombre, String raza, double peso, String color){
         this.nombre=nombre;
         this.raza=raza;
         this.peso=peso;
         this.color=color;
     }
-    public void dormir(){
-        System.out.println(getNombre()+" esta durmiendo");
-    }
 
-    public void hacerRuido(){
-        System.out.println(getNombre()+ " hace el ruido " + getRuido());
-    }
 }
