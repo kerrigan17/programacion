@@ -1,10 +1,10 @@
-public  class Turismo extends Vehiculo {
-    protected String numplazas;
+public class Turismo extends Vehiculo {
+    protected int numPlazas;
+    protected String tipoUso;
 
-    public Turismo(int ruedas, String color, String marca, int numPlazas, String tipo){
-        this.ruedas=ruedas;
-        this.color=color;
-        this.marca=marca;
-        this.numplazas;
+    public Turismo(int ruedas, String color, String marca, int numPlazas, String tipoUso) {
+        super(ruedas, color, marca);
+        this.numPlazas = numPlazas;
+        this.tipoUso = tipoUso;
     }
 }
