@@ -1,4 +1,4 @@
-package tema4;
+package Herencia.Ejercicio3;
 
 public class Figura2D {
     public double area() {

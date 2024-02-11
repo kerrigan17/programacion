@@ -1,5 +1,4 @@
 package Herencia.Ejercicio3;
-import tema4.Figura2D;
 
 public class Rectangulo extends Figura2D {
     private double base;
