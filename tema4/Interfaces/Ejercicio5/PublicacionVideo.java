@@ -1,4 +1,4 @@
-package Herencia.Ejercicio5;
+package Interfaces.Ejercicio5;
 
 public class PublicacionVideo implements Publicacion, AbrirPublicacion, Publicacionconreaccion {
     private String rutaVideo;

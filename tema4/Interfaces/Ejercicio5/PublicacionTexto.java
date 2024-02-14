@@ -1,4 +1,4 @@
-package Herencia.Ejercicio5;
+package Interfaces.Ejercicio5;
 
 public class PublicacionTexto implements Publicacion, Publicacionconreaccion {
     private String contenido;
