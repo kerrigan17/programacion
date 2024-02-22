@@ -14,7 +14,7 @@ private List<Vehiculo> registro;
 
     public void llegadaVehiculo() {
         Random random = new Random();
-        int tipoAleatorio = random.nextInt(3); // 0 para turismo, 1 para camión, 2 para ciclomotor
+        int tipoAleatorio = random.nextInt(3); 
 
         String tipoVehiculo;
         switch (tipoAleatorio) {
