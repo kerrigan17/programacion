@@ -1,5 +1,5 @@
 package ejercicio4;
 
-public class revistas {
+public class Revista {
     
 }

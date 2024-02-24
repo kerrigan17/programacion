@@ -11,10 +11,12 @@ public class Buho implements Animal {
         this.tipoAnimal = "Buho";
         this.dateTime =dateTime;
     }
-
+    public String getTipoAnimal() {
+        return "Buho";
+    }
     @Override
     public void hacerSonido() {
-        System.out.println("*El buho esta huluando*");
+        System.out.println("El buho esta huluando");
     }
 
     @Override

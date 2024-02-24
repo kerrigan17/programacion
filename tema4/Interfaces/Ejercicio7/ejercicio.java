@@ -1,5 +1,5 @@
 package Interfaces.Ejercicio7;
-
+/* 
 public class ejercicio {
     
 public interface Ataque3 {
@@ -92,3 +92,4 @@ public static void main() {
 
 }
 }
+*/

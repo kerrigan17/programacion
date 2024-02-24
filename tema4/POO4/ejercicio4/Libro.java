@@ -1,5 +1,5 @@
 package ejercicio4;
 
-public class libros {
+public class Libro {
     
 }

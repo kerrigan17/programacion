@@ -6,52 +6,46 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 
-public class Bosque {
-    private List<Animal> registroAnimales;
-    Animal animal;
+class Bosque {
+    private final List<Animal> registroAnimales;
 
     public Bosque(){
-        registroAnimales =new ArrayList<>();
+        registroAnimales = new ArrayList<>();
     }
 
     public void llegadaAnimales(){
-        Random random =new Random();
-        int aleatorio = random.nextInt(5);
+        Random random = new Random();
+        int aleatorio = random.nextInt(6); 
         LocalDateTime dateTime = LocalDateTime.now();
+        Animal animal;
         switch (aleatorio) {
-            case 1:  
-                animal= new Buho();
-                System.out.println(dateTime);
+            case 1:
+                animal = new Buho();
                 break;
             case 2:
-                System.out.println(dateTime);
                 animal = new Ciervo();
-                registroAnimales.add(animal);
                 break;
             case 3:
-                System.out.println(dateTime);
-                animal =new Jabali();
-                registroAnimales.add(animal);
+                animal = new Jabali();
                 break;
             case 4:
-                System.out.println(dateTime);
                 animal = new Oso();
-                registroAnimales.add(animal);
                 break;
             case 5:
-                System.out.println(dateTime);
                 animal = new Lobo();
-                registroAnimales.add(animal);
-            default:
                 break;
-        }  
-        animal.hacerSonido();
-        registroAnimales.add(animal);
-
-        
+            default:
+                animal = null;
+                break;
+        }
+        if (animal != null) {
+            animal.hacerSonido();
+            registroAnimales.add(animal);
+        }
     }
+
     public void mostrarRegistros(){
-    System.out.println("\nRegistro de animales en el bosque:");
+        System.out.println("\nRegistro de animales en el bosque:");
         for(Animal animal : registroAnimales){
             System.out.println(animal);
         }
