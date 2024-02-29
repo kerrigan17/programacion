@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 
+
 class Bosque {
     private final List<Animal> registroAnimales;
 
@@ -39,6 +40,7 @@ class Bosque {
                 break;
         }
         if (animal != null) {
+            animal.tipoAnimal(animal.getClass().getSimpleName(), dateTime);
             animal.hacerSonido();
             registroAnimales.add(animal);
         }
@@ -47,7 +49,7 @@ class Bosque {
     public void mostrarRegistros(){
         System.out.println("\nRegistro de animales en el bosque:");
         for(Animal animal : registroAnimales){
-            System.out.println(animal);
+            System.out.println(animal.toString());
         }
     }
 }

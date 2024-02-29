@@ -1,23 +1,31 @@
 package ejercicio5;
 
-class Mago implements Combatiente{
+class Mago implements ICombatiente{
+    int vida;
 
-    @Override
-    public int atacar() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'atacar'");
+    public Mago(int vida) {
+        this.vida = vida;
     }
 
-    @Override
-    public int defender(String ataque) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'defender'");
+    public Ataque atacar() {
+        if (Math.random() < 0.9) {
+            System.out.println("El Mago ha atacado");
+            return new Ataque("a distancia", (int)(Math.random() * 11) + 15 + (int)(vida * 0.1));
+        } else {
+            System.out.println("El Mago ha atacado");
+            return new Ataque("a distancia", (int)(Math.random() * 11) + 15);
+        }
     }
 
-    @Override
+    public void defender(Ataque ataque) {
+        System.out.println("El Mago se ha defendido");        
+        if (ataque.tipo.equals("cuerpo a cuerpo")) {
+            vida -= (int)(Math.random() * 6) + 5;
+        }
+    }
+
     public boolean estaVivo() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'estaVivo'");
+        return vida > 0;
     }
     
 }

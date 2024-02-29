@@ -11,6 +11,7 @@ public class Main {
         while (choice!=5) {
             menu();
             choice = in.nextInt();
+            scanner.nextLine();
             switch (choice) {
                 case 1:
                     System.out.print("Ingrese el título del ítem: ");
@@ -22,7 +23,7 @@ public class Main {
                 case 2:
                     System.out.print("Ingrese el título del ítem a buscar: ");
                     String searchTitle = scanner.nextLine();
-                    biblioteca.buscarItem(searchTitle);
+                    biblioteca.searchItems(searchTitle);
                     break;
                 case 3:
                     System.out.print("Ingrese el título del ítem a eliminar: ");
@@ -30,7 +31,7 @@ public class Main {
                     biblioteca.deleteItem(deleteTitle);
                     break;
                 case 4:
-                    biblioteca.listItems();
+                    biblioteca.listItem();
                     break;
                 case 5:
                     System.out.println("Saliendo del programa...");

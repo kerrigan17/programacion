@@ -2,32 +2,37 @@ package ejercicio5;
 
 import java.util.Random;
 
-class Berserker implements Combatiente{
-    private int vida;
-    private boolean vivo;
-    private  Random random;
+class Berserker implements ICombatiente{
+    int vida;
+    int maxVida;
+    Random random;
 
-    public Berserker() {
-        vida = 100;
-        vivo = true;
-        random = new Random();
-    }
-    
-    @Override
-    public int atacar() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'atacar'");
+    public Berserker(int vida) {
+        this.vida = vida;
+        this.maxVida = vida;
     }
 
-    @Override
-    public int defender(String ataque) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'defender'");
+    public Ataque atacar() {
+        if (Math.random() < 0.1) {
+            System.out.println("El Berserker ha atacado");
+            return new Ataque("cuerpo a cuerpo", (int)(Math.random() * 11) + 10 + (maxVida - vida));
+        } else {
+            System.out.println("El Berserker ha atacado");
+            return new Ataque("cuerpo a cuerpo", (int)(Math.random() * 11) + 10);
+        }
+
     }
 
-    @Override
+    public void defender(Ataque ataque) {
+        if (ataque.tipo.equals("a distancia")) {
+            vida -= (int)(Math.random() * 6) + 5;
+        } else {
+            vida -= (int)(Math.random() * 4) + 2;
+        }
+        System.out.println("El Berserker se ha defendido");
+    }
+
     public boolean estaVivo() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'estaVivo'");
+        return vida > 0;
     }
 }

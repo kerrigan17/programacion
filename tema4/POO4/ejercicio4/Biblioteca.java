@@ -9,8 +9,8 @@ public class Biblioteca {
         items = new ArrayList<>();
     }
 
-    public void addItem(String title, String type){
-        items.add(new Item(title, type));
+    public void addItem(String title){
+        items.add(new Item(title));
         System.out.println("Item creado");
     }
 
