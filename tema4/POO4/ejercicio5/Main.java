@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        // Crear una lista de 50 combatientes
+        
         List<ICombatiente> combatientes = new ArrayList<>();
         Random random = new Random();
 
@@ -24,17 +24,14 @@ public class Main {
                     break;
             }
         }    
-            // Simular la batalla hasta que solo quede un combatiente
             while (combatientes.size() > 1) {
                 List<ICombatiente> sobrevivientes = new ArrayList<>();
     
-                // Dividir la lista de combatientes en grupos de dos
                 for (int i = 0; i < combatientes.size(); i += 2) {
                     if (i + 1 < combatientes.size()) {
                         ICombatiente combatiente1 = combatientes.get(i);
                         ICombatiente combatiente2 = combatientes.get(i + 1);
     
-                        // Realizar la batalla entre dos combatientes
                         while (combatiente1.estaVivo() && combatiente2.estaVivo()) {
                             Ataque ataque = combatiente1.atacar();
                             combatiente2.defender(ataque);
@@ -53,16 +50,13 @@ public class Main {
                     }
                 }
     
-                // Actualizar la lista de combatientes con los sobrevivientes
                 combatientes = sobrevivientes;
     
-                // Verificar si solo queda un combatiente vivo
                 if (combatientes.size() == 1) {
                     break;
                 }
             }
 
-        // Mostrar al ganador
         ICombatiente ganador = combatientes.get(0);
         System.out.println("El ganador del Battle Royale es: " + ganador.getClass().getSimpleName());
     }
