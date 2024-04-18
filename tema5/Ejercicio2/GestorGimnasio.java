@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class GestorGimnasio {
-    private Map<String, Usuarios> usuarios;
+    Map<String, Usuarios> usuarios;
 
     public GestorGimnasio() {
         this.usuarios = new HashMap<>();
@@ -62,7 +62,7 @@ public class GestorGimnasio {
             System.out.println("5. Salir");
             System.out.print("Seleccione una opción: ");
             int opcion = scanner.nextInt();
-            scanner.nextLine(); // Consumir el salto de línea
+            scanner.nextLine();
 
             switch (opcion) {
                 case 1:
