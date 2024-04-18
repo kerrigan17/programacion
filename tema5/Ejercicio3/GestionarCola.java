@@ -13,7 +13,7 @@ public class GestionarCola {
 
     public void agregarUsuario(String nombre, int edad, String dni){
         Usuario nuevoUsuario = new Usuario(nombre, edad, dni);
-        if (usuarios.contains(nuevoUsuario)) {
+        if (usuarios.contains(dni)) {
             System.out.println("Ya hay un usuario con ese DNI");
         } else {
             usuarios.add(nuevoUsuario);
@@ -34,18 +34,14 @@ public class GestionarCola {
         }
     }
 
-    public void mostrarUsuario(String dni) {
-        boolean encontrado = false;
-        for (Usuario usuario : usuarios) {
-            if (usuario.getDni().equals(dni)) {
-                encontrado = true;
-                System.out.println("Nombre: " + usuario.getNombre());
-                System.out.println("Edad: " + usuario.getEdad());
-                break;
-            }
-        }
-        if (!encontrado) {
-            System.out.println("Error: No existe ningún usuario con ese DNI.");
+    public void mostrarUsuario() {
+        int i = 1;
+        for (Usuario usuario : usuarios) {            
+            System.out.println("USUARIO " + i);
+            System.out.println("Nombre: " + usuario.getNombre());
+            System.out.println("Edad: " + usuario.getEdad());
+            System.out.println("DNI: " + usuario.getDni());
+            i ++;
         }
     }
 
@@ -58,7 +54,7 @@ public class GestionarCola {
             System.out.println("\n--- Menú ---");
             System.out.println("1. Agregar usuario a la cola");
             System.out.println("2. Eliminar primer usuario de la cola");
-            System.out.println("3. Mostrar usuario específico");
+            System.out.println("3. Mostrar usuarios");
             System.out.println("3. Eliminar usuario específico de la cola");
             System.out.println("5. Salir");
             System.out.print("Seleccione una opción: ");
@@ -80,9 +76,7 @@ public class GestionarCola {
                     System.out.print("Primer usuario se ha ido");
                     break;
                 case 3:
-                    System.out.print("Ingrese el DNI del usuario a mostrar: ");
-                    String dniMostrar = scanner.nextLine();
-                    gestor.mostrarUsuario(dniMostrar);
+                    gestor.mostrarUsuario();
                     break;
                 case 4:
                     System.out.print("Ingrese el DNI del usuario a eliminar: ");
