@@ -1,25 +1,23 @@
 package Ejercicio3;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class GestionarCola {
-   ArrayList <Usuario> usuarios;
+   List <Usuario> usuarios;
 
     public GestionarCola(){
         this.usuarios = new ArrayList<>();
     }
 
-    public void agregarUsuario(String nombre, int edad, String dni){            
-        for (Usuario usuario : usuarios) {
-            if (usuario.getDni().equals(dni)) {
-                System.out.println("Ya hay un usuario con ese dni");
-                break;
-            }else{
-                Usuario nuevoUsuario = new Usuario(nombre, edad, dni);
-                usuarios.add(nuevoUsuario);
-                System.out.println("Usuario agregado correctamente.");
-            }
+    public void agregarUsuario(String nombre, int edad, String dni){
+        Usuario nuevoUsuario = new Usuario(nombre, edad, dni);
+        if (usuarios.contains(nuevoUsuario)) {
+            System.out.println("Ya hay un usuario con ese DNI");
+        } else {
+            usuarios.add(nuevoUsuario);
+            System.out.println("Usuario agregado correctamente.");
         }
     }
 
