@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class GestionarCola {
-   List <Usuario> usuarios;
+    List <Usuario> usuarios;
 
     public GestionarCola(){
         this.usuarios = new ArrayList<>();
@@ -45,7 +45,7 @@ public class GestionarCola {
         }
     }
 
-   public static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         GestionarCola gestor = new GestionarCola();
 
