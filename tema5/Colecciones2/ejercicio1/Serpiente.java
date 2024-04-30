@@ -1,4 +1,4 @@
-package Colecciones2;
+package Colecciones2.ejercicio1;
 
 public class Serpiente extends AvistamientoAnimal {
     private double longitud;

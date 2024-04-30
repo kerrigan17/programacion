@@ -1,4 +1,4 @@
-package Colecciones2;
+package Colecciones2.ejercicio1;
 
 public abstract class AvistamientoAnimal {
     private int hora;

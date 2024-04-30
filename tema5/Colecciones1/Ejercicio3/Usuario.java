@@ -37,7 +37,6 @@ public class Usuario {
     }
 
     public Usuario get(String dni2) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'get'");
     }
 }
