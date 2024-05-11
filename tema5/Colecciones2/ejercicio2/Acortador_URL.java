@@ -3,10 +3,12 @@ package Colecciones2.ejercicio2;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
+import java.util.Scanner;
 
 
 public class Acortador_URL {
     private Map<String, String> DiccionarioURL;
+    Scanner scanner = new Scanner(System.in);
 
     public Acortador_URL(){
         this.DiccionarioURL= new HashMap<>();
@@ -54,8 +56,8 @@ public class Acortador_URL {
     public static void main(String[] args) {
         Acortador_URL acortador = new Acortador_URL();
 
+
         boolean continuar = true;
-        Random scanner;
         while (continuar) {
             System.out.println("\nMenú:");
             System.out.println("1. Añadir nuevo registro");
@@ -94,7 +96,6 @@ public class Acortador_URL {
             }
         }
 
-        scanner.close();
     }
 
 }
