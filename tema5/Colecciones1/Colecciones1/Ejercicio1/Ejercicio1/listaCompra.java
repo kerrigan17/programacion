@@ -31,7 +31,7 @@ public class listaCompra {
                     }
 
                     break;
-                case 3:
+                case 2:
                     salir = true;
                     break;
             }
