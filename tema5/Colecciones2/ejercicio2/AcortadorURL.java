@@ -52,22 +52,17 @@ public class AcortadorURL {
     public static void main(String[] args) {
         AcortadorURL acortador = new AcortadorURL();
 
-        // Crear un nuevo registro
         String clave = acortador.crearRegistro("https://es.wikipedia.org/wiki/Wikipedia");
         System.out.println("Clave generada: " + clave);
 
-        // Resolver dirección
         String direccion = acortador.resolverDireccion(clave);
         System.out.println("URL resuelta: " + direccion);
 
-        // Mostrar todos los registros
         Map<String, String> registros = acortador.mostrarRegistros();
         System.out.println("Registros: " + registros);
 
-        // Borrar un registro
         System.out.println(acortador.borrarRegistro(clave));
 
-        // Mostrar todos los registros después de borrar
         registros = acortador.mostrarRegistros();
         System.out.println("Registros después de borrar: " + registros);
     }
